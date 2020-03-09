@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace Rock_Paper_Scissors_Game
 {
@@ -17,10 +18,16 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        WMPLib.WindowsMediaPlayer Player;
+        private string url;
+
+        private void Form1_Load(object sender, EventArgs e) //C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav
         {
-            System.Media.SoundPlayer BGMUSIC = new System.Media.SoundPlayer(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
-            BGMUSIC.PlayLooping();
+            Player = new WMPLib.WindowsMediaPlayer();
+            Player.URL = url;
+            Player.controls.play();
+            Player.settings.volume = 20;
+            Player(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
         }
     }
 }
