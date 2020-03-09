@@ -55,6 +55,7 @@
             // EXITBUTTON
             // 
             this.EXITBUTTON.BackColor = System.Drawing.Color.PapayaWhip;
+            this.EXITBUTTON.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EXITBUTTON.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EXITBUTTON.ForeColor = System.Drawing.Color.Firebrick;
             this.EXITBUTTON.Location = new System.Drawing.Point(308, 426);
