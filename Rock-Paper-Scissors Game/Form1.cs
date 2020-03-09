@@ -16,5 +16,11 @@ namespace Rock_Paper_Scissors_Game
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            System.Media.SoundPlayer BGMUSIC = new System.Media.SoundPlayer(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
+            BGMUSIC.PlayLooping();
+        }
     }
 }
