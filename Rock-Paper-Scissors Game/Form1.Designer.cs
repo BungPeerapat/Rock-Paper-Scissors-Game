@@ -57,7 +57,7 @@
             this.EXITBUTTON.BackColor = System.Drawing.Color.PapayaWhip;
             this.EXITBUTTON.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EXITBUTTON.ForeColor = System.Drawing.Color.Firebrick;
-            this.EXITBUTTON.Location = new System.Drawing.Point(309, 509);
+            this.EXITBUTTON.Location = new System.Drawing.Point(308, 426);
             this.EXITBUTTON.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.EXITBUTTON.Name = "EXITBUTTON";
             this.EXITBUTTON.Size = new System.Drawing.Size(223, 57);
@@ -68,6 +68,7 @@
             // RPSG
             // 
             this.RPSG.AutoSize = true;
+            this.RPSG.BackColor = System.Drawing.Color.Transparent;
             this.RPSG.Font = new System.Drawing.Font("Franxurter Totally Fat", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RPSG.ForeColor = System.Drawing.Color.Firebrick;
             this.RPSG.Location = new System.Drawing.Point(160, 61);
@@ -80,6 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franxurter Totally Fat", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
             this.label1.Location = new System.Drawing.Point(472, 121);
