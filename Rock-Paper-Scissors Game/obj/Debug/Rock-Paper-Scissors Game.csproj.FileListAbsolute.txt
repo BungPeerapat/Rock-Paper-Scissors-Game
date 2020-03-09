@@ -7,3 +7,8 @@ C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\ob
 C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock-Paper-Scissors Game.csproj.GenerateResource.cache
 C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock-Paper-Scissors Game.exe
 C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock-Paper-Scissors Game.pdb
+C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\bin\Debug\Interop.WMPLib.dll
+C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Interop.WMPLib.dll
+C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock-Paper-Scissors Game.csproj.ResolveComReference.cache

@@ -19,15 +19,17 @@ namespace Rock_Paper_Scissors_Game
         }
 
         WMPLib.WindowsMediaPlayer Player;
-        private string url;
-
-        private void Form1_Load(object sender, EventArgs e) //C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav
+        private void PlayFile(string url)
         {
             Player = new WMPLib.WindowsMediaPlayer();
             Player.URL = url;
             Player.controls.play();
-            Player.settings.volume = 20;
-            Player(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
+            Player.settings.volume = 5;
+        }
+
+        private void Form1_Load(object sender, EventArgs e) //C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav
+        {
+            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
         }
     }
 }

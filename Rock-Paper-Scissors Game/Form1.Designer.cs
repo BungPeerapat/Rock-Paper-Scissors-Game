@@ -39,7 +39,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(111, 86);
+            this.label1.Location = new System.Drawing.Point(145, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1156, 145);
             this.label1.TabIndex = 0;
@@ -48,9 +49,10 @@
             // STARTBUTTON
             // 
             this.STARTBUTTON.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STARTBUTTON.Location = new System.Drawing.Point(486, 317);
+            this.STARTBUTTON.Location = new System.Drawing.Point(623, 289);
+            this.STARTBUTTON.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.STARTBUTTON.Name = "STARTBUTTON";
-            this.STARTBUTTON.Size = new System.Drawing.Size(391, 122);
+            this.STARTBUTTON.Size = new System.Drawing.Size(223, 57);
             this.STARTBUTTON.TabIndex = 1;
             this.STARTBUTTON.Text = "START";
             this.STARTBUTTON.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // EXITBUTTON
             // 
             this.EXITBUTTON.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EXITBUTTON.Location = new System.Drawing.Point(486, 501);
+            this.EXITBUTTON.Location = new System.Drawing.Point(623, 416);
+            this.EXITBUTTON.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.EXITBUTTON.Name = "EXITBUTTON";
-            this.EXITBUTTON.Size = new System.Drawing.Size(391, 122);
+            this.EXITBUTTON.Size = new System.Drawing.Size(223, 57);
             this.EXITBUTTON.TabIndex = 1;
             this.EXITBUTTON.Text = "EXIT GAME";
             this.EXITBUTTON.UseVisualStyleBackColor = true;
@@ -69,25 +72,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(924, 241);
+            this.label2.Location = new System.Drawing.Point(525, 187);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(301, 37);
+            this.label2.Size = new System.Drawing.Size(424, 50);
             this.label2.TabIndex = 2;
             this.label2.Text = "MADE BY BUNGPEERAPAT";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 34F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1346, 747);
+            this.ClientSize = new System.Drawing.Size(1408, 548);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EXITBUTTON);
             this.Controls.Add(this.STARTBUTTON);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Impact", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "Form1";
             this.Text = "R-P-S GAME";
             this.Load += new System.EventHandler(this.Form1_Load);
