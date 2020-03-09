@@ -29,6 +29,8 @@ namespace Rock_Paper_Scissors_Game
 
         private void Form1_Load(object sender, EventArgs e) //C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav
         {
+            RPSG.BackColor = Color.FromArgb(0, 0, 0, 0);
+            label1.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
         }
     }
