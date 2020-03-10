@@ -31,5 +31,10 @@ namespace Rock_Paper_Scissors_Game
         {
             PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
         }
+
+        private void EXITBUTTON_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

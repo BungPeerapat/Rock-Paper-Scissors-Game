@@ -65,6 +65,7 @@
             this.EXITBUTTON.TabIndex = 1;
             this.EXITBUTTON.Text = "EXIT GAME";
             this.EXITBUTTON.UseVisualStyleBackColor = false;
+            this.EXITBUTTON.Click += new System.EventHandler(this.EXITBUTTON_Click);
             // 
             // RPSG
             // 
