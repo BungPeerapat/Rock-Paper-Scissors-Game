@@ -48,7 +48,7 @@
             // CB1
             // 
             this.CB1.Image = ((System.Drawing.Image)(resources.GetObject("CB1.Image")));
-            this.CB1.Location = new System.Drawing.Point(203, 44);
+            this.CB1.Location = new System.Drawing.Point(170, 31);
             this.CB1.Name = "CB1";
             this.CB1.Size = new System.Drawing.Size(476, 479);
             this.CB1.TabIndex = 1;
