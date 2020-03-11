@@ -24,12 +24,13 @@ namespace Rock_Paper_Scissors_Game
             Player = new WMPLib.WindowsMediaPlayer();
             Player.URL = url;
             Player.controls.play();
+            Player.settings.setMode("loop", true);
             Player.settings.volume = 5;
         }
 
         private void Form1_Load(object sender, EventArgs e) //C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav
         {
-            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
+            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
         }
 
         private void EXITBUTTON_Click(object sender, EventArgs e)
@@ -39,6 +40,8 @@ namespace Rock_Paper_Scissors_Game
 
         private void STARTBUTTON_Click(object sender, EventArgs e)
         {
+            Player.close();
+            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
             Game GameStart = new Game();
             GameStart.Show();
             this.Hide();
