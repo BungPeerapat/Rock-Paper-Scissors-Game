@@ -15,7 +15,7 @@ namespace Rock_Paper_Scissors_Game
         public Game()
         {
             InitializeComponent();
-            CB1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            circularPictureBox1.BackColor = Color.FromArgb(0, 0, 0, 0);
         }
 
         private void label1_Click(object sender, EventArgs e)
