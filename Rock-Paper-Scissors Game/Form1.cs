@@ -40,8 +40,8 @@ namespace Rock_Paper_Scissors_Game
 
         private void STARTBUTTON_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("if you Ready Please press : OK");
             Player.close();
-            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
             Game GameStart = new Game();
             GameStart.Show();
             this.Hide();

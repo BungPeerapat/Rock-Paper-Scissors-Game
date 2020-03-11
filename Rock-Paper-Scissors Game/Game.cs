@@ -17,8 +17,11 @@ namespace Rock_Paper_Scissors_Game
         {
             InitializeComponent();
             CB1.BackColor = Color.FromArgb(0, 0, 0, 0);
-            MessageBox.Show("if you Ready Please press : OK");
-
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Beep();
+                System.Threading.Thread.Sleep(1000);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,6 +31,11 @@ namespace Rock_Paper_Scissors_Game
         private void BGGAMESTART_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void CB1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

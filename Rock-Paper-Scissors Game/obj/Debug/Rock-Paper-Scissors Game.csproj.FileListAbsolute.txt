@@ -14,3 +14,4 @@ C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\ob
 C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock_Paper_Scissors_Game.Game.resources
 C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock-Paper-Scissors Game.csproj.CopyComplete
+C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Rock-Paper-Scissors Game\obj\Debug\Rock-Paper-Scissors Game.csprojAssemblyReference.cache

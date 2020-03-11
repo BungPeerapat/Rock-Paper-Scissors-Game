@@ -55,6 +55,7 @@
             this.CB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CB1.TabIndex = 1;
             this.CB1.TabStop = false;
+            this.CB1.Click += new System.EventHandler(this.CB1_Click);
             // 
             // Game
             // 
