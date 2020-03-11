@@ -37,5 +37,12 @@ namespace Rock_Paper_Scissors_Game
         {
 
         }
+
+        private void EXITBUTTON_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 Menu = new Form1();
+            Menu.Show();
+        }
     }
 }
