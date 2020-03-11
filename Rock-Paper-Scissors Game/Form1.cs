@@ -36,5 +36,12 @@ namespace Rock_Paper_Scissors_Game
         {
             this.Close();
         }
+
+        private void STARTBUTTON_Click(object sender, EventArgs e)
+        {
+            Game GameStart = new Game();
+            GameStart.Show();
+            this.Hide();
+        }
     }
 }

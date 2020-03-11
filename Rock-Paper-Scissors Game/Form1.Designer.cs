@@ -51,6 +51,7 @@
             this.STARTBUTTON.Size = new System.Drawing.Size(116, 92);
             this.STARTBUTTON.TabIndex = 1;
             this.STARTBUTTON.UseVisualStyleBackColor = false;
+            this.STARTBUTTON.Click += new System.EventHandler(this.STARTBUTTON_Click);
             // 
             // EXITBUTTON
             // 
