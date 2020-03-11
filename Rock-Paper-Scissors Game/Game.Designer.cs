@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.BGGAMESTART = new System.Windows.Forms.PictureBox();
-            this.circularPictureBox1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.CB1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BGGAMESTART)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CB1)).BeginInit();
             this.SuspendLayout();
             // 
             // BGGAMESTART
@@ -44,30 +44,31 @@
             this.BGGAMESTART.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BGGAMESTART.TabIndex = 0;
             this.BGGAMESTART.TabStop = false;
+            this.BGGAMESTART.Click += new System.EventHandler(this.BGGAMESTART_Click);
             // 
-            // circularPictureBox1
+            // CB1
             // 
-            this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
-            this.circularPictureBox1.Location = new System.Drawing.Point(182, 56);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(499, 374);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 1;
-            this.circularPictureBox1.TabStop = false;
+            this.CB1.Image = ((System.Drawing.Image)(resources.GetObject("CB1.Image")));
+            this.CB1.Location = new System.Drawing.Point(195, 94);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(491, 374);
+            this.CB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CB1.TabIndex = 1;
+            this.CB1.TabStop = false;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 655);
-            this.Controls.Add(this.circularPictureBox1);
+            this.Controls.Add(this.CB1);
             this.Controls.Add(this.BGGAMESTART);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GAME STARTED!";
             ((System.ComponentModel.ISupportInitialize)(this.BGGAMESTART)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CB1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -75,6 +76,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox BGGAMESTART;
-        private CircularPictureBox circularPictureBox1;
+        private CircularPictureBox CB1;
     }
 }
