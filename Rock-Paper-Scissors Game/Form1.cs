@@ -41,6 +41,7 @@ namespace Rock_Paper_Scissors_Game
         private void STARTBUTTON_Click(object sender, EventArgs e)
         {
             MessageBox.Show("if you Ready Please press : OK");
+            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
             Player.close();
             Game GameStart = new Game();
             GameStart.Show();

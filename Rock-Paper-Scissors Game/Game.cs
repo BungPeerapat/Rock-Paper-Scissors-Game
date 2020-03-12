@@ -17,11 +17,6 @@ namespace Rock_Paper_Scissors_Game
         {
             InitializeComponent();
             CB1.BackColor = Color.FromArgb(0, 0, 0, 0);
-            for (int i = 0; i < 3; i++)
-            {
-                Console.Beep();
-                System.Threading.Thread.Sleep(1000);
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)
