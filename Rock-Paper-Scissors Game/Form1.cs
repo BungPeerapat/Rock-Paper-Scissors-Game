@@ -35,7 +35,7 @@ namespace Rock_Paper_Scissors_Game
 
         private void EXITBUTTON_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void STARTBUTTON_Click(object sender, EventArgs e)
