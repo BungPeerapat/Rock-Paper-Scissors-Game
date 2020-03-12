@@ -64,13 +64,15 @@
             // 
             // BACKGROUNDGAMESTART
             // 
+            this.BACKGROUNDGAMESTART.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BACKGROUNDGAMESTART.Image = ((System.Drawing.Image)(resources.GetObject("BACKGROUNDGAMESTART.Image")));
             this.BACKGROUNDGAMESTART.Location = new System.Drawing.Point(-2, -10);
             this.BACKGROUNDGAMESTART.Name = "BACKGROUNDGAMESTART";
-            this.BACKGROUNDGAMESTART.Size = new System.Drawing.Size(853, 588);
+            this.BACKGROUNDGAMESTART.Size = new System.Drawing.Size(851, 585);
             this.BACKGROUNDGAMESTART.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BACKGROUNDGAMESTART.TabIndex = 2;
             this.BACKGROUNDGAMESTART.TabStop = false;
+            this.BACKGROUNDGAMESTART.Visible = false;
             // 
             // EXIT
             // 
