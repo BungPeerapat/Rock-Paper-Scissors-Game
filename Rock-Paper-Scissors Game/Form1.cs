@@ -51,14 +51,27 @@ namespace Rock_Paper_Scissors_Game
         private void STARTBUTTON_Click(object sender, EventArgs e)
         {
             MessageBox.Show("if you Ready Please press : OK");
-            STARTSOUND1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
             Player.close();
-            Game GameStart = new Game();
-            GameStart.Show();
-            this.Hide();
+            STARTSOUND1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
+            for (int time = 0; time < 1; time++)
+            {
+                Thread.Sleep(1000);
+                for (int Delay = 0; Delay < 1; Delay++)
+                {
+                    Thread.Sleep(2000);
+                    Game GameStart = new Game();
+                    GameStart.Show();
+                    this.Hide();
+                }
+            }
         }
 
         private void RPSG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DelayforStartGame_Tick(object sender, EventArgs e)
         {
 
         }

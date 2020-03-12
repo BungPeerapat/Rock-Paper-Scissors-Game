@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.STARTBUTTON = new System.Windows.Forms.Button();
             this.EXITBUTTON = new System.Windows.Forms.Button();
             this.RPSG = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.DelayforStartGame = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // STARTBUTTON
@@ -95,6 +97,10 @@
             this.label1.Text = "MADE BY MASHIRO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // DelayforStartGame
+            // 
+            this.DelayforStartGame.Tick += new System.EventHandler(this.DelayforStartGame_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -125,6 +131,7 @@
         private System.Windows.Forms.Button EXITBUTTON;
         private System.Windows.Forms.Label RPSG;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer DelayforStartGame;
     }
 }
 
