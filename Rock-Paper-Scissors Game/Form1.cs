@@ -47,7 +47,7 @@ namespace Rock_Paper_Scissors_Game
             STARTSOUNDFIRST.controls.play();
             STARTSOUNDFIRST.settings.volume = 20;
         }
-        async Task PutTaskDelay() \\เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        async Task PutTaskDelay() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
             STARTSOUND1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
             await Task.Delay(1545);
