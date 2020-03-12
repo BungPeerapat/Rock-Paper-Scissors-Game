@@ -72,7 +72,6 @@
             this.BACKGROUNDGAMESTART.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BACKGROUNDGAMESTART.TabIndex = 2;
             this.BACKGROUNDGAMESTART.TabStop = false;
-            this.BACKGROUNDGAMESTART.Visible = false;
             // 
             // EXIT
             // 
@@ -87,6 +86,7 @@
             this.EXIT.TabIndex = 3;
             this.EXIT.Text = "EXIT GAME";
             this.EXIT.UseVisualStyleBackColor = false;
+            this.EXIT.Click += new System.EventHandler(this.EXIT_Click_1);
             // 
             // Game
             // 

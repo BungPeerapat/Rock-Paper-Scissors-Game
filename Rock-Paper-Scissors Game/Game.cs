@@ -16,9 +16,9 @@ namespace Rock_Paper_Scissors_Game
     {
         public Game()
         {
+            StartSound(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
-            StartSound(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
         }
 
@@ -77,7 +77,7 @@ namespace Rock_Paper_Scissors_Game
 
         }
 
-        private void EXIT_Click(object sender, EventArgs e)
+        private void EXIT_Click_1(object sender, EventArgs e)
         {
             Player2.close();
             this.Close();

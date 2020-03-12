@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Threading;
 
 namespace Rock_Paper_Scissors_Game
 {
@@ -38,9 +39,19 @@ namespace Rock_Paper_Scissors_Game
             Close();
         }
 
+        WMPLib.WindowsMediaPlayer STARTSOUNDFIRST;
+        private void STARTSOUND1(string url)
+        {
+            STARTSOUNDFIRST = new WMPLib.WindowsMediaPlayer();
+            STARTSOUNDFIRST.URL = url;
+            STARTSOUNDFIRST.controls.play();
+            STARTSOUNDFIRST.settings.volume = 20;
+        }
+
         private void STARTBUTTON_Click(object sender, EventArgs e)
         {
             MessageBox.Show("if you Ready Please press : OK");
+            STARTSOUND1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
             Player.close();
             Game GameStart = new Game();
             GameStart.Show();
