@@ -99,7 +99,6 @@
             // 
             // DelayforStartGame
             // 
-            this.DelayforStartGame.Tick += new System.EventHandler(this.DelayforStartGame_Tick);
             // 
             // Form1
             // 
@@ -109,7 +108,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(840, 655);
+            this.ClientSize = new System.Drawing.Size(840, 676);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RPSG);
             this.Controls.Add(this.EXITBUTTON);
