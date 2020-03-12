@@ -30,7 +30,7 @@ namespace Rock_Paper_Scissors_Game
 
         private void Form1_Load(object sender, EventArgs e) //C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav
         {
-            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
+            PlayFile(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
         }
 
         private void EXITBUTTON_Click(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace Rock_Paper_Scissors_Game
             Game GameStart = new Game();
             GameStart.Show();
             this.Hide();
+        }
+
+        private void RPSG_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

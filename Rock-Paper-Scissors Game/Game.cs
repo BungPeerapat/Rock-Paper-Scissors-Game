@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Threading;
 
 namespace Rock_Paper_Scissors_Game
 {
@@ -18,13 +19,9 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB1.BackColor = Color.FromArgb(0, 0, 0, 0);
             StartSound(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
-            if (CB1 == ParallelLoopResult)
-            {
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\1.wav");
-            }
-            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
-
+            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
         }
+
         WMPLib.WindowsMediaPlayer FS1;
         WMPLib.WindowsMediaPlayer FS2;
         WMPLib.WindowsMediaPlayer Start;

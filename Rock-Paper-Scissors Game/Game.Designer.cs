@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.BGGAMESTART = new System.Windows.Forms.PictureBox();
-            this.CB1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.EXITBUTTON = new System.Windows.Forms.Button();
+            this.CB1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BGGAMESTART)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB1)).BeginInit();
             this.SuspendLayout();
@@ -47,17 +47,6 @@
             this.BGGAMESTART.TabStop = false;
             this.BGGAMESTART.Click += new System.EventHandler(this.BGGAMESTART_Click);
             // 
-            // CB1
-            // 
-            this.CB1.Image = ((System.Drawing.Image)(resources.GetObject("CB1.Image")));
-            this.CB1.Location = new System.Drawing.Point(195, 94);
-            this.CB1.Name = "CB1";
-            this.CB1.Size = new System.Drawing.Size(491, 374);
-            this.CB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CB1.TabIndex = 1;
-            this.CB1.TabStop = false;
-            this.CB1.Click += new System.EventHandler(this.CB1_Click);
-            // 
             // EXITBUTTON
             // 
             this.EXITBUTTON.BackColor = System.Drawing.Color.PapayaWhip;
@@ -72,6 +61,17 @@
             this.EXITBUTTON.Text = "EXIT GAME";
             this.EXITBUTTON.UseVisualStyleBackColor = false;
             this.EXITBUTTON.Click += new System.EventHandler(this.EXITBUTTON_Click);
+            // 
+            // CB1
+            // 
+            this.CB1.Image = ((System.Drawing.Image)(resources.GetObject("CB1.Image")));
+            this.CB1.Location = new System.Drawing.Point(171, 101);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(491, 415);
+            this.CB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CB1.TabIndex = 1;
+            this.CB1.TabStop = false;
+            this.CB1.Click += new System.EventHandler(this.CB1_Click);
             // 
             // Game
             // 

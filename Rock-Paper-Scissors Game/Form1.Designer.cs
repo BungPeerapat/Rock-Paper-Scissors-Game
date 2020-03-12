@@ -72,14 +72,15 @@
             // 
             this.RPSG.AutoSize = true;
             this.RPSG.BackColor = System.Drawing.Color.Transparent;
-            this.RPSG.Font = new System.Drawing.Font("Franxurter Totally Fat", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RPSG.Font = new System.Drawing.Font("Franxurter Totally Fat", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RPSG.ForeColor = System.Drawing.Color.Firebrick;
-            this.RPSG.Location = new System.Drawing.Point(160, 61);
+            this.RPSG.Location = new System.Drawing.Point(44, 31);
             this.RPSG.Name = "RPSG";
-            this.RPSG.Size = new System.Drawing.Size(695, 60);
+            this.RPSG.Size = new System.Drawing.Size(929, 81);
             this.RPSG.TabIndex = 3;
             this.RPSG.Text = "ROCK PAPER SCISSOR GAME";
             this.RPSG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RPSG.Click += new System.EventHandler(this.RPSG_Click);
             // 
             // label1
             // 
@@ -87,7 +88,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Franxurter Totally Fat", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(472, 121);
+            this.label1.Location = new System.Drawing.Point(531, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(310, 39);
             this.label1.TabIndex = 3;

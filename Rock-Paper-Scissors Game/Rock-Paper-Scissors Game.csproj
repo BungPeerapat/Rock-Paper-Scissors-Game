@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Choose\Rock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Choose\Rock.Designer.cs">
+      <DependentUpon>Rock.cs</DependentUpon>
+    </Compile>
     <Compile Include="CirclePicture.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Choose\Rock.resx">
+      <DependentUpon>Rock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
