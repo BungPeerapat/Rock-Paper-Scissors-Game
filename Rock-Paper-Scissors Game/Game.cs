@@ -17,6 +17,28 @@ namespace Rock_Paper_Scissors_Game
         {
             InitializeComponent();
             CB1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            StartSound(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จัดให้ค่า.wav");
+            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
+
+        }
+        WMPLib.WindowsMediaPlayer Start;
+        WMPLib.WindowsMediaPlayer Player2;
+        private void PlayFile2(string url)
+        {
+            Player2 = new WMPLib.WindowsMediaPlayer();
+            Player2.URL = url;
+            Player2.controls.play();
+            Player2.settings.setMode("loop", true);
+            Player2.settings.volume = 5;
+        }
+
+        private void StartSound(string url)
+        {
+            Start = new WMPLib.WindowsMediaPlayer();
+            Start.URL = url;
+            Start.controls.play();
+            Start.settings.setMode("loop", false);
+            Start.settings.volume = 5;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,6 +57,7 @@ namespace Rock_Paper_Scissors_Game
 
         private void EXITBUTTON_Click(object sender, EventArgs e)
         {
+            Player2.close();
             this.Close();
             Form1 Menu = new Form1();
             Menu.Show();
