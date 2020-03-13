@@ -90,7 +90,7 @@
             this.PictureMain.BackColor = System.Drawing.Color.Transparent;
             this.AT1.SetDecoration(this.PictureMain, BunifuAnimatorNS.DecorationType.None);
             this.PictureMain.Image = ((System.Drawing.Image)(resources.GetObject("PictureMain.Image")));
-            this.PictureMain.Location = new System.Drawing.Point(198, 89);
+            this.PictureMain.Location = new System.Drawing.Point(199, 74);
             this.PictureMain.Name = "PictureMain";
             this.PictureMain.Size = new System.Drawing.Size(445, 363);
             this.PictureMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,8 +160,8 @@
         private System.Windows.Forms.Button EXIT2;
         private System.Windows.Forms.PictureBox BACKGROUNDGAMESTART;
         private System.Windows.Forms.Button EXIT;
-        private System.Windows.Forms.PictureBox PictureMain;
         private object RPSGAMECC;
         private BunifuAnimatorNS.BunifuTransition AT1;
+        public System.Windows.Forms.PictureBox PictureMain;
     }
 }

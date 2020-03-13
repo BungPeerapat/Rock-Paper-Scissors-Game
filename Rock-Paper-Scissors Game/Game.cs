@@ -27,13 +27,23 @@ namespace Rock_Paper_Scissors_Game
         {
             await Task.Delay(2000);
         }
+        async Task Time030second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        {
+            await Task.Delay(500);
+        }
         async Task Animation1() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
-            await Task.Delay(3000);
+            await Task.Delay(2000);
             if(PictureMain.Visible == false)
                AT1.ShowSync(PictureMain);
             else
                AT1.HideSync(PictureMain);
+            await Task.Delay(2000);
+            for (int PositionTop = 0; PositionTop < 199; PositionTop++)
+            {
+                PictureMain.Top -= 1;
+                Time030second();
+            }
         }
 
         WMPLib.WindowsMediaPlayer FS1;
