@@ -19,13 +19,42 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
-            AT1.HideSync(PictureMain);
-            Animation1();
-            
+            AnimationOpen();
+            async Task AnimationOpen() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+            {
+                await Task.Delay(2000);
+                if (PictureMain.Visible == false)
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                    AT1.ShowSync(PictureMain);
+                    await Task.Delay(5000);
+                }
+            }
+            PictureMain.Visible = true;
+            PictureMain.Show();
+            async Task AnimatioClose() //Delay Close Animation
+            {
+                await Task.Delay(2000);
+                if (PictureMain.Visible == true)
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                    AT1.HideSync(PictureMain);
+                    await Task.Delay(2000);
+                }
+            }
+            Moveup();
         }
         async Task Time2second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
             await Task.Delay(2000);
+        }
+        async Task Time5second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        {
+            await Task.Delay(5000);
         }
         async Task Time01second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
@@ -37,23 +66,6 @@ namespace Rock_Paper_Scissors_Game
             {
                 CB.Top -= 5;
                 await Time01second();
-            }
-        }
-        async Task Animation1() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
-        {
-            await Moveup();
-            await Task.Delay(3000);
-            if(PictureMain.Visible == false)
-            {
-               AT1.ShowSync(PictureMain);
-               await Task.Delay(5000);
-               PictureMain.Visible = true;
-                await Task.Delay(3000);
-            }
-            else
-            {
-                AT1.HideSync(PictureMain);
-                await Task.Delay(5000);
             }
         }
 
