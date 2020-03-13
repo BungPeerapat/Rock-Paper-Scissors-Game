@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.Threading;
-
+using System.Drawing.Imaging;
 namespace Rock_Paper_Scissors_Game
 {
     public partial class Game : Form
@@ -117,7 +117,6 @@ namespace Rock_Paper_Scissors_Game
         }
         async Task AnimatioClose() //Delay Close Animation
         {
-            await Task.Delay(2000);
             if (PictureMain.Visible == true)
             {
                 Console.Beep();
@@ -141,8 +140,11 @@ namespace Rock_Paper_Scissors_Game
         {
             Moveup();
             await AnimationOpen();
-            await Time2second();
             await AnimatioClose();
+            PictureMain.Location = new Point(291, 12); //สร้าง Position ใหม่่
+            PictureMain.Size = new Size(600, 100);
+            PictureMain.Show();
+
         }
     }
 }
