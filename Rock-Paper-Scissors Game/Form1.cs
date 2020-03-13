@@ -45,7 +45,7 @@ namespace Rock_Paper_Scissors_Game
             STARTSOUNDFIRST = new WMPLib.WindowsMediaPlayer();
             STARTSOUNDFIRST.URL = url;
             STARTSOUNDFIRST.controls.play();
-            STARTSOUNDFIRST.settings.volume = 20;
+            STARTSOUNDFIRST.settings.volume = 5;
         }
         async Task PutTaskDelay() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {

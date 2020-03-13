@@ -19,6 +19,21 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
+            AT1.HideSync(PictureMain);
+            Animation1();
+            
+        }
+        async Task Time2second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        {
+            await Task.Delay(2000);
+        }
+        async Task Animation1() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        {
+            await Task.Delay(3000);
+            if(PictureMain.Visible == false)
+               AT1.ShowSync(PictureMain);
+            else
+               AT1.HideSync(PictureMain);
         }
 
         WMPLib.WindowsMediaPlayer FS1;
