@@ -35,11 +35,11 @@
             this.BACKGROUNDGAMESTART = new System.Windows.Forms.PictureBox();
             this.EXIT = new System.Windows.Forms.Button();
             this.AT1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.PictureMain = new System.Windows.Forms.PictureBox();
+            this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CB)).BeginInit();
             this.SuspendLayout();
             // 
             // EXIT2
@@ -106,19 +106,6 @@
             animation1.TransparencyCoeff = 0F;
             this.AT1.DefaultAnimation = animation1;
             // 
-            // CB
-            // 
-            this.CB.BackColor = System.Drawing.Color.Transparent;
-            this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
-            this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
-            this.CB.Location = new System.Drawing.Point(201, 51);
-            this.CB.Name = "CB";
-            this.CB.Size = new System.Drawing.Size(464, 427);
-            this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CB.TabIndex = 0;
-            this.CB.TabStop = false;
-            // 
             // PictureMain
             // 
             this.PictureMain.BackColor = System.Drawing.Color.Transparent;
@@ -133,6 +120,19 @@
             this.PictureMain.TabStop = false;
             this.PictureMain.Visible = false;
             this.PictureMain.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // CB
+            // 
+            this.CB.BackColor = System.Drawing.Color.Transparent;
+            this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
+            this.CB.Location = new System.Drawing.Point(201, 51);
+            this.CB.Name = "CB";
+            this.CB.Size = new System.Drawing.Size(464, 427);
+            this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CB.TabIndex = 0;
+            this.CB.TabStop = false;
             // 
             // Game
             // 
@@ -150,8 +150,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Let Started!";
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
             this.ResumeLayout(false);
 
         }

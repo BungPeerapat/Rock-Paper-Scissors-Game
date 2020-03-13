@@ -42,12 +42,13 @@ namespace Rock_Paper_Scissors_Game
         async Task Animation1() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
             await Moveup();
-            await Task.Delay(2000);
+            await Task.Delay(3000);
             if(PictureMain.Visible == false)
             {
                AT1.ShowSync(PictureMain);
                await Task.Delay(5000);
-               await PictureMain.Visible = true;
+               PictureMain.Visible = true;
+                await Task.Delay(3000);
             }
             else
             {
