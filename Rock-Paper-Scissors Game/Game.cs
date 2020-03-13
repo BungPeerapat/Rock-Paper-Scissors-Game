@@ -146,5 +146,7 @@ namespace Rock_Paper_Scissors_Game
             PictureMain.Show();
 
         }
+
+        //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^
     }
 }
