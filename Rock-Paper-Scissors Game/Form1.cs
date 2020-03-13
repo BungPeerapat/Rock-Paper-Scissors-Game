@@ -54,7 +54,6 @@ namespace Rock_Paper_Scissors_Game
         }
         async private void STARTBUTTON_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("if you Ready Please press : OK");
             await PutTaskDelay();
             Player.close();
             Game StartGame = new Game();

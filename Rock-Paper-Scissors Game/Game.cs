@@ -83,5 +83,10 @@ namespace Rock_Paper_Scissors_Game
             Form1 Menu = new Form1();
             Menu.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

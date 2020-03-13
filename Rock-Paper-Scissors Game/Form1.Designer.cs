@@ -97,9 +97,6 @@
             this.label1.Text = "MADE BY MASHIRO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DelayforStartGame
-            // 
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
