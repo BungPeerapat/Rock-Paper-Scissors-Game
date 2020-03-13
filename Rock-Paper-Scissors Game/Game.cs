@@ -108,8 +108,6 @@ namespace Rock_Paper_Scissors_Game
             if (PictureMain.Visible == false)
             {
                 Console.Beep();
-                Console.Beep();
-                Console.Beep();
                 AT1.ShowSync(PictureMain);
                 await Task.Delay(2000);
                 PictureMain.Visible = true;
@@ -119,8 +117,6 @@ namespace Rock_Paper_Scissors_Game
         {
             if (PictureMain.Visible == true)
             {
-                Console.Beep();
-                Console.Beep();
                 Console.Beep();
                 AT1.HideSync(PictureMain);
                 await Task.Delay(2000);
@@ -144,7 +140,6 @@ namespace Rock_Paper_Scissors_Game
             PictureMain.Location = new Point(339, 12); //สร้าง Position ใหม่่
             PictureMain.Size = new Size(245, 172);
             PictureMain.Show();
-
         }
 
         //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^
