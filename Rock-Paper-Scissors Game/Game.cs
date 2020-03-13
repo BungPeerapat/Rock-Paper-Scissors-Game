@@ -27,22 +27,32 @@ namespace Rock_Paper_Scissors_Game
         {
             await Task.Delay(2000);
         }
-        async Task Time030second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        async Task Time01second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
-            await Task.Delay(500);
+            await Task.Delay(10);
+        }
+        async Task Moveup() //รอให้ CD เลื่อนขึ้นจนเสร็จ
+        {
+            for (int PositionTop = 0; PositionTop < 20;)
+            {
+                CB.Top -= 5;
+                await Time01second();
+            }
         }
         async Task Animation1() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
+            await Moveup();
             await Task.Delay(2000);
             if(PictureMain.Visible == false)
-               AT1.ShowSync(PictureMain);
-            else
-               AT1.HideSync(PictureMain);
-            await Task.Delay(2000);
-            for (int PositionTop = 0; PositionTop < 199; PositionTop++)
             {
-                PictureMain.Top -= 1;
-                Time030second();
+               AT1.ShowSync(PictureMain);
+               await Task.Delay(5000);
+               await PictureMain.Visible = true;
+            }
+            else
+            {
+                AT1.HideSync(PictureMain);
+                await Task.Delay(5000);
             }
         }
 

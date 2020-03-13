@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.EXIT2 = new System.Windows.Forms.Button();
             this.BACKGROUNDGAMESTART = new System.Windows.Forms.PictureBox();
             this.EXIT = new System.Windows.Forms.Button();
-            this.PictureMain = new System.Windows.Forms.PictureBox();
             this.AT1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.PictureMain = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
             this.SuspendLayout();
             // 
             // EXIT2
@@ -62,7 +62,7 @@
             this.BACKGROUNDGAMESTART.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AT1.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
             this.BACKGROUNDGAMESTART.Image = ((System.Drawing.Image)(resources.GetObject("BACKGROUNDGAMESTART.Image")));
-            this.BACKGROUNDGAMESTART.Location = new System.Drawing.Point(-2, -10);
+            this.BACKGROUNDGAMESTART.Location = new System.Drawing.Point(-3, -4);
             this.BACKGROUNDGAMESTART.Name = "BACKGROUNDGAMESTART";
             this.BACKGROUNDGAMESTART.Size = new System.Drawing.Size(851, 585);
             this.BACKGROUNDGAMESTART.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,12 +85,47 @@
             this.EXIT.UseVisualStyleBackColor = false;
             this.EXIT.Click += new System.EventHandler(this.EXIT_Click_1);
             // 
+            // AT1
+            // 
+            this.AT1.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
+            this.AT1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0.5F;
+            animation1.RotateLimit = 0.2F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.AT1.DefaultAnimation = animation1;
+            // 
+            // CB
+            // 
+            this.CB.BackColor = System.Drawing.Color.Transparent;
+            this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
+            this.CB.Location = new System.Drawing.Point(201, 51);
+            this.CB.Name = "CB";
+            this.CB.Size = new System.Drawing.Size(464, 427);
+            this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CB.TabIndex = 0;
+            this.CB.TabStop = false;
+            // 
             // PictureMain
             // 
             this.PictureMain.BackColor = System.Drawing.Color.Transparent;
+            this.PictureMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AT1.SetDecoration(this.PictureMain, BunifuAnimatorNS.DecorationType.None);
             this.PictureMain.Image = ((System.Drawing.Image)(resources.GetObject("PictureMain.Image")));
-            this.PictureMain.Location = new System.Drawing.Point(199, 74);
+            this.PictureMain.Location = new System.Drawing.Point(210, 92);
             this.PictureMain.Name = "PictureMain";
             this.PictureMain.Size = new System.Drawing.Size(445, 363);
             this.PictureMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,47 +134,14 @@
             this.PictureMain.Visible = false;
             this.PictureMain.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // AT1
-            // 
-            this.AT1.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
-            this.AT1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(30);
-            animation2.RotateCoeff = 0.5F;
-            animation2.RotateLimit = 0.2F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.AT1.DefaultAnimation = animation2;
-            // 
-            // CB
-            // 
-            this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
-            this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
-            this.CB.Location = new System.Drawing.Point(242, 117);
-            this.CB.Name = "CB";
-            this.CB.Size = new System.Drawing.Size(326, 302);
-            this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CB.TabIndex = 0;
-            this.CB.TabStop = false;
-            // 
             // Game
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(846, 572);
-            this.Controls.Add(this.PictureMain);
             this.Controls.Add(this.EXIT);
             this.Controls.Add(this.EXIT2);
             this.Controls.Add(this.CB);
+            this.Controls.Add(this.PictureMain);
             this.Controls.Add(this.BACKGROUNDGAMESTART);
             this.AT1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -148,8 +150,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Let Started!";
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).EndInit();
             this.ResumeLayout(false);
 
         }
