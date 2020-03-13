@@ -19,39 +19,9 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
-            AnimationOpen();
-            async Task AnimationOpen() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
-            {
-                await Task.Delay(2000);
-                if (PictureMain.Visible == false)
-                {
-                    Console.Beep();
-                    Console.Beep();
-                    Console.Beep();
-                    AT1.ShowSync(PictureMain);
-                    await Task.Delay(5000);
-                }
-            }
-            PictureMain.Visible = true;
-            PictureMain.Show();
-            async Task AnimatioClose() //Delay Close Animation
-            {
-                await Task.Delay(2000);
-                if (PictureMain.Visible == true)
-                {
-                    Console.Beep();
-                    Console.Beep();
-                    Console.Beep();
-                    AT1.HideSync(PictureMain);
-                    await Task.Delay(2000);
-                }
-            }
-            Moveup();
+
         }
-        async Task Time2second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
-        {
-            await Task.Delay(2000);
-        }
+
         async Task Time5second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
             await Task.Delay(5000);
@@ -60,13 +30,9 @@ namespace Rock_Paper_Scissors_Game
         {
             await Task.Delay(10);
         }
-        async Task Moveup() //รอให้ CD เลื่อนขึ้นจนเสร็จ
+        async Task Time2second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
-            for (int PositionTop = 0; PositionTop < 20;)
-            {
-                CB.Top -= 5;
-                await Time01second();
-            }
+            await Task.Delay(2000);
         }
 
         WMPLib.WindowsMediaPlayer FS1;
@@ -135,6 +101,48 @@ namespace Rock_Paper_Scissors_Game
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+        async Task AnimationOpen() //Delay For Start Animation
+        {
+            await Task.Delay(2000);
+            if (PictureMain.Visible == false)
+            {
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                AT1.ShowSync(PictureMain);
+                await Task.Delay(2000);
+                PictureMain.Visible = true;
+            }
+        }
+        async Task AnimatioClose() //Delay Close Animation
+        {
+            await Task.Delay(2000);
+            if (PictureMain.Visible == true)
+            {
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+                AT1.HideSync(PictureMain);
+                await Task.Delay(2000);
+                PictureMain.Visible = true;
+                PictureMain.Hide();
+            }
+        }
+        async Task Moveup() //รอให้ CD เลื่อนขึ้นจนเสร็จ
+        {
+            for (int PositionTop = 0; PositionTop < 20;)
+            {
+                CB.Top -= 5;
+                await Time01second();
+            }
+        }
+        async private void CB_Click(object sender, EventArgs e)
+        {
+            Moveup();
+            await AnimationOpen();
+            await Time2second();
+            await AnimatioClose();
         }
     }
 }

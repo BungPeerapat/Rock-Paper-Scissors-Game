@@ -125,6 +125,7 @@
             // 
             this.CB.BackColor = System.Drawing.Color.Transparent;
             this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CB.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
             this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
             this.CB.Location = new System.Drawing.Point(201, 51);
@@ -133,6 +134,7 @@
             this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CB.TabIndex = 0;
             this.CB.TabStop = false;
+            this.CB.Click += new System.EventHandler(this.CB_Click);
             // 
             // Game
             // 
