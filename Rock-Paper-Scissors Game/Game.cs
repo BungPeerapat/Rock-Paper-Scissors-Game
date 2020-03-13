@@ -141,8 +141,8 @@ namespace Rock_Paper_Scissors_Game
             Moveup();
             await AnimationOpen();
             await AnimatioClose();
-            PictureMain.Location = new Point(291, 12); //สร้าง Position ใหม่่
-            PictureMain.Size = new Size(600, 100);
+            PictureMain.Location = new Point(339, 12); //สร้าง Position ใหม่่
+            PictureMain.Size = new Size(245, 172);
             PictureMain.Show();
 
         }
