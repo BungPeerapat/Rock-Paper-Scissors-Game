@@ -140,6 +140,12 @@ namespace Rock_Paper_Scissors_Game
             PictureMain.Location = new Point(339, 12); //สร้าง Position ใหม่่
             PictureMain.Size = new Size(245, 172);
             PictureMain.Show();
+            PictureMain.Visible = false;
+            await Time2second();
+            if (PictureMain.Visible == false)
+            {
+                PictureMain.Visible = true;
+            }
         }
 
         //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^
