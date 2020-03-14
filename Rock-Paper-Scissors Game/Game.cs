@@ -139,12 +139,10 @@ namespace Rock_Paper_Scissors_Game
             await AnimatioClose();
             PictureMain.Location = new Point(339, 12); //สร้าง Position ใหม่่
             PictureMain.Size = new Size(245, 172);
-            PictureMain.Show();
             PictureMain.Visible = false;
-            await Time2second();
             if (PictureMain.Visible == false)
             {
-                PictureMain.Visible = true;
+                AT1.ShowSync(PictureMain);
             }
         }
 
