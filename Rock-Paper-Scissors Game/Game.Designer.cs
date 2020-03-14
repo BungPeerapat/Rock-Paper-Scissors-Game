@@ -80,7 +80,7 @@
             this.AT1.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
             this.BACKGROUNDGAMESTART.Image = ((System.Drawing.Image)(resources.GetObject("BACKGROUNDGAMESTART.Image")));
-            this.BACKGROUNDGAMESTART.Location = new System.Drawing.Point(-36, 218);
+            this.BACKGROUNDGAMESTART.Location = new System.Drawing.Point(2, -11);
             this.BACKGROUNDGAMESTART.Name = "BACKGROUNDGAMESTART";
             this.BACKGROUNDGAMESTART.Size = new System.Drawing.Size(851, 585);
             this.BACKGROUNDGAMESTART.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +146,8 @@
             this.BOTC.BackColor = System.Drawing.Color.Transparent;
             this.AT1.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
-            this.BOTC.Location = new System.Drawing.Point(612, 35);
+            this.BOTC.Image = ((System.Drawing.Image)(resources.GetObject("BOTC.Image")));
+            this.BOTC.Location = new System.Drawing.Point(506, 45);
             this.BOTC.Name = "BOTC";
             this.BOTC.Size = new System.Drawing.Size(182, 177);
             this.BOTC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,10 +159,11 @@
             this.PlayerC.BackColor = System.Drawing.Color.Transparent;
             this.AT1.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
-            this.PlayerC.Location = new System.Drawing.Point(210, 56);
+            this.PlayerC.Image = ((System.Drawing.Image)(resources.GetObject("PlayerC.Image")));
+            this.PlayerC.Location = new System.Drawing.Point(161, 45);
             this.PlayerC.Name = "PlayerC";
-            this.PlayerC.Size = new System.Drawing.Size(182, 177);
-            this.PlayerC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.PlayerC.Size = new System.Drawing.Size(179, 170);
+            this.PlayerC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlayerC.TabIndex = 7;
             this.PlayerC.TabStop = false;
             // 
@@ -218,7 +220,7 @@
             this.AT1.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
             this.Rock.Image = ((System.Drawing.Image)(resources.GetObject("Rock.Image")));
-            this.Rock.Location = new System.Drawing.Point(22, 278);
+            this.Rock.Location = new System.Drawing.Point(42, 278);
             this.Rock.Name = "Rock";
             this.Rock.Size = new System.Drawing.Size(182, 177);
             this.Rock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -266,17 +268,17 @@
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(846, 572);
+            this.Controls.Add(this.CB);
+            this.Controls.Add(this.PlayerC);
+            this.Controls.Add(this.BOTC);
             this.Controls.Add(this.paper);
             this.Controls.Add(this.Scissors);
             this.Controls.Add(this.Rock);
             this.Controls.Add(this.EXIT);
             this.Controls.Add(this.EXIT2);
-            this.Controls.Add(this.CB);
             this.Controls.Add(this.PictureMain);
             this.Controls.Add(this.BACKGROUNDGAMESTART);
-            this.Controls.Add(this.PlayerC);
             this.Controls.Add(this.circularPictureBox1);
-            this.Controls.Add(this.BOTC);
             this.Controls.Add(this.circularPictureBox2);
             this.AT2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.AT1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
