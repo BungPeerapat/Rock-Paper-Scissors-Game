@@ -19,9 +19,16 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
+            Closepicture();
+
+        }
+        async Task Closepicture()
+        {
             Rock.Hide();
             paper.Hide();
             Scissors.Hide();
+            PlayerC.Hide();
+            BOTC.Hide();
         }
         async Task Time05second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
@@ -146,9 +153,13 @@ namespace Rock_Paper_Scissors_Game
             Rock.Show();
             paper.Show();
             Scissors.Show();
+            PlayerC.Show();
+            BOTC.Show();
             Rock.Visible = false;
             Scissors.Visible = false;
             paper.Visible = false;
+            PlayerC.Visible = false;
+            BOTC.Visible = false;
         }
         async private void CB_Click(object sender, EventArgs e)
         {
@@ -168,6 +179,9 @@ namespace Rock_Paper_Scissors_Game
                 AT2.ShowSync(paper);
                 await Time05second();
                 AT2.ShowSync(Scissors);
+                await Time05second();
+                AT2.ShowSync(PlayerC);
+                AT2.ShowSync(BOTC);
             }
         }
 
@@ -175,14 +189,14 @@ namespace Rock_Paper_Scissors_Game
         {
             paper.Hide();
             Scissors.Hide();
-            SpeakerCute1(@"C: \Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
         }
 
         private void Scissors_Click(object sender, EventArgs e)
         {
             Rock.Hide();
             paper.Hide();
-            SpeakerCute1(@"C: \Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
         }
 
         private void paper_Click(object sender, EventArgs e)
