@@ -62,7 +62,7 @@ namespace Rock_Paper_Scissors_Game
             FS1 = new WMPLib.WindowsMediaPlayer();
             FS1.URL = url;
             FS1.controls.play();
-            FS1.settings.volume = 150;
+            FS1.settings.volume = 20;
         }
 
         private void LetStartText(string url)
@@ -172,8 +172,8 @@ namespace Rock_Paper_Scissors_Game
             Moveup();
             await AnimationOpen();
             await AnimatioClose();
-            PictureMain.Location = new Point(304, -4); //สร้าง Position ใหม่่
-            PictureMain.Size = new Size(306, 236);
+            PictureMain.Location = new Point(349, 80); //สร้าง Position ใหม่่
+            PictureMain.Size = new Size(156, 142);
             PictureMain.Visible = false;
             await Visibleturerps();
             if (PictureMain.Visible == false)
@@ -186,10 +186,10 @@ namespace Rock_Paper_Scissors_Game
                 await Time05second();
                 AT2.ShowSync(Scissors);
                 await Time05second();
-                AT2.ShowSync(PlayerC);
-                AT2.ShowSync(BOTC);
-                AT2.ShowSync(PLAYERNAME);
-                AT2.ShowSync(BOTNAME);
+                AT1.ShowSync(PlayerC);
+                AT1.ShowSync(BOTC);
+                AT1.ShowSync(PLAYERNAME);
+                AT1.ShowSync(BOTNAME);
             }
         }
 
@@ -197,14 +197,14 @@ namespace Rock_Paper_Scissors_Game
         {
             paper.Hide();
             Scissors.Hide();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
         }
 
         private void Scissors_Click(object sender, EventArgs e)
         {
             Rock.Hide();
             paper.Hide();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
         }
 
         private void paper_Click(object sender, EventArgs e)
