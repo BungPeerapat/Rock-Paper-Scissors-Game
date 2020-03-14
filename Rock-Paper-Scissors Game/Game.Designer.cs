@@ -46,6 +46,8 @@
             this.Rock = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.PLAYERNAME = new System.Windows.Forms.Label();
+            this.BOTNAME = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOTC)).BeginInit();
@@ -147,7 +149,7 @@
             this.AT1.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
             this.BOTC.Image = ((System.Drawing.Image)(resources.GetObject("BOTC.Image")));
-            this.BOTC.Location = new System.Drawing.Point(506, 45);
+            this.BOTC.Location = new System.Drawing.Point(509, 63);
             this.BOTC.Name = "BOTC";
             this.BOTC.Size = new System.Drawing.Size(182, 177);
             this.BOTC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +162,7 @@
             this.AT1.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
             this.PlayerC.Image = ((System.Drawing.Image)(resources.GetObject("PlayerC.Image")));
-            this.PlayerC.Location = new System.Drawing.Point(161, 45);
+            this.PlayerC.Location = new System.Drawing.Point(162, 63);
             this.PlayerC.Name = "PlayerC";
             this.PlayerC.Size = new System.Drawing.Size(179, 170);
             this.PlayerC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,10 +266,38 @@
             animation2.TransparencyCoeff = 1F;
             this.AT2.DefaultAnimation = animation2;
             // 
+            // PLAYERNAME
+            // 
+            this.PLAYERNAME.AutoSize = true;
+            this.AT1.SetDecoration(this.PLAYERNAME, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.PLAYERNAME, BunifuAnimatorNS.DecorationType.None);
+            this.PLAYERNAME.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold);
+            this.PLAYERNAME.ForeColor = System.Drawing.Color.Navy;
+            this.PLAYERNAME.Location = new System.Drawing.Point(12, 125);
+            this.PLAYERNAME.Name = "PLAYERNAME";
+            this.PLAYERNAME.Size = new System.Drawing.Size(138, 48);
+            this.PLAYERNAME.TabIndex = 8;
+            this.PLAYERNAME.Text = "PLAYER";
+            // 
+            // BOTNAME
+            // 
+            this.BOTNAME.AutoSize = true;
+            this.AT1.SetDecoration(this.BOTNAME, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.BOTNAME, BunifuAnimatorNS.DecorationType.None);
+            this.BOTNAME.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold);
+            this.BOTNAME.ForeColor = System.Drawing.Color.Maroon;
+            this.BOTNAME.Location = new System.Drawing.Point(721, 125);
+            this.BOTNAME.Name = "BOTNAME";
+            this.BOTNAME.Size = new System.Drawing.Size(85, 48);
+            this.BOTNAME.TabIndex = 8;
+            this.BOTNAME.Text = "BOT";
+            // 
             // Game
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(846, 572);
+            this.Controls.Add(this.BOTNAME);
+            this.Controls.Add(this.PLAYERNAME);
             this.Controls.Add(this.CB);
             this.Controls.Add(this.PlayerC);
             this.Controls.Add(this.BOTC);
@@ -298,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Rock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -318,5 +349,7 @@
         private CircularPictureBox circularPictureBox2;
         public CircularPictureBox PlayerC;
         public CircularPictureBox BOTC;
+        private System.Windows.Forms.Label PLAYERNAME;
+        private System.Windows.Forms.Label BOTNAME;
     }
 }

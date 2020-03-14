@@ -29,6 +29,8 @@ namespace Rock_Paper_Scissors_Game
             Scissors.Hide();
             PlayerC.Hide();
             BOTC.Hide();
+            PLAYERNAME.Hide();
+            BOTNAME.Hide();
         }
         async Task Time05second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
@@ -155,11 +157,15 @@ namespace Rock_Paper_Scissors_Game
             Scissors.Show();
             PlayerC.Show();
             BOTC.Show();
+            PLAYERNAME.Show();
+            BOTNAME.Show();
             Rock.Visible = false;
             Scissors.Visible = false;
             paper.Visible = false;
             PlayerC.Visible = false;
             BOTC.Visible = false;
+            PLAYERNAME.Visible = false;
+            BOTNAME.Visible = false;
         }
         async private void CB_Click(object sender, EventArgs e)
         {
@@ -182,6 +188,8 @@ namespace Rock_Paper_Scissors_Game
                 await Time05second();
                 AT2.ShowSync(PlayerC);
                 AT2.ShowSync(BOTC);
+                AT2.ShowSync(PLAYERNAME);
+                AT2.ShowSync(BOTNAME);
             }
         }
 
