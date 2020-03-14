@@ -19,9 +19,14 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
-
+            Rock.Hide();
+            paper.Hide();
+            Scissors.Hide();
         }
-
+        async Task Time05second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        {
+            await Task.Delay(500);
+        }
         async Task Time5second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
             await Task.Delay(5000);
@@ -33,6 +38,10 @@ namespace Rock_Paper_Scissors_Game
         async Task Time2second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
             await Task.Delay(2000);
+        }
+        async Task Time1second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
+        {
+            await Task.Delay(1000);
         }
 
         WMPLib.WindowsMediaPlayer FS1;
@@ -134,6 +143,9 @@ namespace Rock_Paper_Scissors_Game
         }
         async Task Visibleturerps() //เปิดภาพ ค้อน กรรไกร กระดาษ
         {
+            Rock.Show();
+            paper.Show();
+            Scissors.Show();
             Rock.Visible = false;
             Scissors.Visible = false;
             paper.Visible = false;
@@ -146,12 +158,17 @@ namespace Rock_Paper_Scissors_Game
             PictureMain.Location = new Point(339, 12); //สร้าง Position ใหม่่
             PictureMain.Size = new Size(245, 172);
             PictureMain.Visible = false;
+            await Visibleturerps();
             if (PictureMain.Visible == false)
             {
                 AT1.ShowSync(PictureMain);
+                await Time05second();
+                AT2.ShowSync(Rock);
+                await Time05second();
+                AT2.ShowSync(paper);
+                await Time05second();
+                AT2.ShowSync(Scissors);
             }
-            Visibleturnrps();
-            if (Rock.Visible == false && AND Scissors.Visible == false && AND paper.Visible == false)
         }
 
         //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^
