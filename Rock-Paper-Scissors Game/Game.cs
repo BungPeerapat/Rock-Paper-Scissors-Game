@@ -171,6 +171,26 @@ namespace Rock_Paper_Scissors_Game
             }
         }
 
+        private void Rock_Click(object sender, EventArgs e)
+        {
+            paper.Hide();
+            Scissors.Hide();
+            SpeakerCute1(@"C: \Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
+        }
+
+        private void Scissors_Click(object sender, EventArgs e)
+        {
+            Rock.Hide();
+            paper.Hide();
+            SpeakerCute1(@"C: \Users\BungK\source\repos\Rock - Paper - Scissors Game\Music\Sound\จัดค่า.wav");
+        }
+
+        private void paper_Click(object sender, EventArgs e)
+        {
+            Rock.Hide();
+            Scissors.Hide();
+        }
+
         //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^
     }
 }
