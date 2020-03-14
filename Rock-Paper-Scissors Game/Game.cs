@@ -132,6 +132,12 @@ namespace Rock_Paper_Scissors_Game
                 await Time01second();
             }
         }
+        async Task Visibleturerps() //เปิดภาพ ค้อน กรรไกร กระดาษ
+        {
+            Rock.Visible = false;
+            Scissors.Visible = false;
+            paper.Visible = false;
+        }
         async private void CB_Click(object sender, EventArgs e)
         {
             Moveup();
@@ -144,7 +150,8 @@ namespace Rock_Paper_Scissors_Game
             {
                 AT1.ShowSync(PictureMain);
             }
-
+            Visibleturnrps();
+            if (Rock.Visible == false && AND Scissors.Visible == false && AND paper.Visible == false)
         }
 
         //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^

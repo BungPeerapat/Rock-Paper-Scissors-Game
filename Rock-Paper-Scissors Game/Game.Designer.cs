@@ -38,16 +38,16 @@
             this.AT1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PictureMain = new System.Windows.Forms.PictureBox();
             this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.Rock = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.Scissors = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.paper = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.circularPictureBox1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
-            this.circularPictureBox2 = new Rock_Paper_Scissors_Game.CircularPictureBox();
-            this.circularPictureBox3 = new Rock_Paper_Scissors_Game.CircularPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Scissors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paper)).BeginInit();
             this.SuspendLayout();
             // 
             // EXIT2
@@ -148,6 +148,42 @@
             this.CB.TabStop = false;
             this.CB.Click += new System.EventHandler(this.CB_Click);
             // 
+            // Rock
+            // 
+            this.AT1.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.Rock.Image = ((System.Drawing.Image)(resources.GetObject("Rock.Image")));
+            this.Rock.Location = new System.Drawing.Point(22, 278);
+            this.Rock.Name = "Rock";
+            this.Rock.Size = new System.Drawing.Size(182, 177);
+            this.Rock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Rock.TabIndex = 5;
+            this.Rock.TabStop = false;
+            // 
+            // Scissors
+            // 
+            this.AT1.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.Scissors.Image = ((System.Drawing.Image)(resources.GetObject("Scissors.Image")));
+            this.Scissors.Location = new System.Drawing.Point(349, 278);
+            this.Scissors.Name = "Scissors";
+            this.Scissors.Size = new System.Drawing.Size(182, 177);
+            this.Scissors.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Scissors.TabIndex = 6;
+            this.Scissors.TabStop = false;
+            // 
+            // paper
+            // 
+            this.AT1.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.paper.Image = ((System.Drawing.Image)(resources.GetObject("paper.Image")));
+            this.paper.Location = new System.Drawing.Point(643, 278);
+            this.paper.Name = "paper";
+            this.paper.Size = new System.Drawing.Size(182, 177);
+            this.paper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.paper.TabIndex = 7;
+            this.paper.TabStop = false;
+            // 
             // AT2
             // 
             this.AT2.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
@@ -169,43 +205,13 @@
             animation2.TransparencyCoeff = 1F;
             this.AT2.DefaultAnimation = animation2;
             // 
-            // circularPictureBox1
-            // 
-            this.AT1.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.circularPictureBox1.Location = new System.Drawing.Point(22, 278);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(182, 177);
-            this.circularPictureBox1.TabIndex = 5;
-            this.circularPictureBox1.TabStop = false;
-            // 
-            // circularPictureBox2
-            // 
-            this.AT1.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.circularPictureBox2.Location = new System.Drawing.Point(347, 278);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(182, 177);
-            this.circularPictureBox2.TabIndex = 6;
-            this.circularPictureBox2.TabStop = false;
-            // 
-            // circularPictureBox3
-            // 
-            this.AT1.SetDecoration(this.circularPictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.circularPictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.circularPictureBox3.Location = new System.Drawing.Point(652, 278);
-            this.circularPictureBox3.Name = "circularPictureBox3";
-            this.circularPictureBox3.Size = new System.Drawing.Size(182, 177);
-            this.circularPictureBox3.TabIndex = 7;
-            this.circularPictureBox3.TabStop = false;
-            // 
             // Game
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(846, 572);
-            this.Controls.Add(this.circularPictureBox3);
-            this.Controls.Add(this.circularPictureBox2);
-            this.Controls.Add(this.circularPictureBox1);
+            this.Controls.Add(this.paper);
+            this.Controls.Add(this.Scissors);
+            this.Controls.Add(this.Rock);
             this.Controls.Add(this.EXIT);
             this.Controls.Add(this.EXIT2);
             this.Controls.Add(this.CB);
@@ -221,9 +227,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Scissors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paper)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,8 +244,8 @@
         private BunifuAnimatorNS.BunifuTransition AT1;
         public System.Windows.Forms.PictureBox PictureMain;
         private BunifuAnimatorNS.BunifuTransition AT2;
-        private CircularPictureBox circularPictureBox1;
-        private CircularPictureBox circularPictureBox2;
-        private CircularPictureBox circularPictureBox3;
+        private CircularPictureBox Rock;
+        private CircularPictureBox Scissors;
+        private CircularPictureBox paper;
     }
 }
