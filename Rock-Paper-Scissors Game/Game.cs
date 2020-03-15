@@ -198,6 +198,8 @@ namespace Rock_Paper_Scissors_Game
             paper.Hide();
             Scissors.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            Time2second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
 
         private void Scissors_Click(object sender, EventArgs e)
@@ -205,14 +207,19 @@ namespace Rock_Paper_Scissors_Game
             Rock.Hide();
             paper.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            Time2second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
 
         private void paper_Click(object sender, EventArgs e)
         {
             Rock.Hide();
             Scissors.Hide();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            Time2second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
 
-        //ไปแต่งฉากตอนที่ PictureMain เปลี่ยนจุดแล้วให้มันเปิดสวยๆหน่อย เอา Effect เดิมก็ได้นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า ^0^
+        //ไปแต่งเรื่องตัวเลือกหน่อยนะมันกดซ้ำได้อ่ะ จากบุ๊งเมื่อเวลา 10:13 pm นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า
     }
 }
