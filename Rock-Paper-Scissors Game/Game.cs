@@ -193,14 +193,22 @@ namespace Rock_Paper_Scissors_Game
             }
         }
 
+        async Task PictureEnablefalse()
+        {
+            Rock.Enabled = false;
+            Scissors.Enabled = false;
+            paper.Enabled = false;
+        }
         private void Rock_Click(object sender, EventArgs e)
         {
             paper.Hide();
             Scissors.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            PictureEnablefalse();
             Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
-            Rock.
+
+
         }
 
         private void Scissors_Click(object sender, EventArgs e)
@@ -208,6 +216,7 @@ namespace Rock_Paper_Scissors_Game
             Rock.Hide();
             paper.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            PictureEnablefalse();
             Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
@@ -217,6 +226,7 @@ namespace Rock_Paper_Scissors_Game
             Rock.Hide();
             Scissors.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            PictureEnablefalse();
             Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
