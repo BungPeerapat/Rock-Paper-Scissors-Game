@@ -206,7 +206,7 @@ namespace Rock_Paper_Scissors_Game
             PictureEnablefalse();
             await Time2second();
             Rock.Visible = true;
-            if (Rock.Visible = true)
+            if (Rock.Visible == true)
             {
                 AT1.HideSync(Rock);
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
@@ -214,6 +214,7 @@ namespace Rock_Paper_Scissors_Game
                 Time1second();
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                CountDownStart();
             }
         }
 
@@ -221,12 +222,17 @@ namespace Rock_Paper_Scissors_Game
         {
             CountDownCC.Visible = false;
             CountDownCC.Enabled = true;
-            if (CountDownCC.Visible = false)
+            if (CountDownCC.Visible == false)
             {
                 AT3.ShowSync(CountDownCC);
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+                this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 1.jpg");
                 Time1second();
-                this.CountDownCC.Load("");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+                this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 2.jpg");
+                Time1second();
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+                this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 3.jpg");
             }
 
         }
@@ -239,7 +245,7 @@ namespace Rock_Paper_Scissors_Game
             PictureEnablefalse();
             await Time2second();
             Scissors.Visible = true;
-            if (Scissors.Visible = true)
+            if (Scissors.Visible == true)
             {
                 AT1.HideSync(Scissors);
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
@@ -247,6 +253,7 @@ namespace Rock_Paper_Scissors_Game
                 Time1second();
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                CountDownStart();
             }
         }
 
@@ -258,7 +265,7 @@ namespace Rock_Paper_Scissors_Game
             PictureEnablefalse();
             await Time2second();
             paper.Visible = true;
-            if (paper.Visible = true)
+            if (paper.Visible == true)
             {
                 AT1.HideSync(paper);
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
@@ -266,6 +273,7 @@ namespace Rock_Paper_Scissors_Game
                 Time1second();
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                CountDownStart();
             }
         }
     }
