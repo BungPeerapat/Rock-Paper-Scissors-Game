@@ -204,15 +204,13 @@ namespace Rock_Paper_Scissors_Game
             paper.Hide();
             Scissors.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
-            await Time2second();
             PictureEnablefalse();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
-            await Time2second();
             await Time2second();
             Rock.Visible = true;
             if (Rock.Visible = true)
             {
                 AT1.HideSync(Rock);
+                this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
             }
         }
 
@@ -222,9 +220,6 @@ namespace Rock_Paper_Scissors_Game
             paper.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
             PictureEnablefalse();
-            await Time2second();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
-            await Time2second();
             await Time2second();
             Scissors.Visible = true;
             if (Scissors.Visible = true)
@@ -240,13 +235,11 @@ namespace Rock_Paper_Scissors_Game
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
             PictureEnablefalse();
             await Time2second();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
-            await Time2second();
-            await Time2second();
             paper.Visible = true;
             if (paper.Visible = true)
             {
                 AT1.HideSync(paper);
+
             }
         }
     }
