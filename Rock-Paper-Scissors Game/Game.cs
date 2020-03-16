@@ -199,38 +199,55 @@ namespace Rock_Paper_Scissors_Game
             Scissors.Enabled = false;
             paper.Enabled = false;
         }
-        private void Rock_Click(object sender, EventArgs e)
+        async private void Rock_Click(object sender, EventArgs e)
         {
             paper.Hide();
             Scissors.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
+            await Time2second();
             PictureEnablefalse();
-            Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
-
-
+            await Time2second();
+            await Time2second();
+            Rock.Visible = true;
+            if (Rock.Visible = true)
+            {
+                AT1.HideSync(Rock);
+            }
         }
 
-        private void Scissors_Click(object sender, EventArgs e)
+        async private void Scissors_Click(object sender, EventArgs e)
         {
             Rock.Hide();
             paper.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
             PictureEnablefalse();
-            Time2second();
+            await Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
+            await Time2second();
+            await Time2second();
+            Scissors.Visible = true;
+            if (Scissors.Visible = true)
+            {
+                AT1.HideSync(Scissors);
+            }
         }
 
-        private void paper_Click(object sender, EventArgs e)
+        async private void paper_Click(object sender, EventArgs e)
         {
             Rock.Hide();
             Scissors.Hide();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
             PictureEnablefalse();
-            Time2second();
+            await Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
+            await Time2second();
+            await Time2second();
+            paper.Visible = true;
+            if (paper.Visible = true)
+            {
+                AT1.HideSync(paper);
+            }
         }
-
-        //ไปแต่งเรื่องตัวเลือกหน่อยนะมันกดซ้ำได้อ่ะ จากบุ๊งเมื่อเวลา 10:13 pm นะบุ๊งในอีก 10 ชั่วโมงข้างหน้า
     }
 }
