@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
             this.EXIT2 = new System.Windows.Forms.Button();
             this.BACKGROUNDGAMESTART = new System.Windows.Forms.PictureBox();
             this.EXIT = new System.Windows.Forms.Button();
@@ -45,9 +46,11 @@
             this.Scissors = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.Rock = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
-            this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PLAYERNAME = new System.Windows.Forms.Label();
             this.BOTNAME = new System.Windows.Forms.Label();
+            this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.CountDownCC = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.AT3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOTC)).BeginInit();
@@ -58,14 +61,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.Scissors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).BeginInit();
             this.SuspendLayout();
             // 
             // EXIT2
             // 
             this.EXIT2.BackColor = System.Drawing.Color.PapayaWhip;
             this.EXIT2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AT1.SetDecoration(this.EXIT2, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.EXIT2, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.EXIT2, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.EXIT2, BunifuAnimatorNS.DecorationType.None);
             this.EXIT2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EXIT2.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold);
             this.EXIT2.ForeColor = System.Drawing.Color.Firebrick;
@@ -79,8 +84,9 @@
             // BACKGROUNDGAMESTART
             // 
             this.BACKGROUNDGAMESTART.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AT1.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.BACKGROUNDGAMESTART, BunifuAnimatorNS.DecorationType.None);
             this.BACKGROUNDGAMESTART.Image = ((System.Drawing.Image)(resources.GetObject("BACKGROUNDGAMESTART.Image")));
             this.BACKGROUNDGAMESTART.Location = new System.Drawing.Point(2, -11);
             this.BACKGROUNDGAMESTART.Name = "BACKGROUNDGAMESTART";
@@ -93,8 +99,9 @@
             // 
             this.EXIT.BackColor = System.Drawing.Color.PapayaWhip;
             this.EXIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AT1.SetDecoration(this.EXIT, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.EXIT, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.EXIT, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.EXIT, BunifuAnimatorNS.DecorationType.None);
             this.EXIT.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EXIT.ForeColor = System.Drawing.Color.Firebrick;
             this.EXIT.Location = new System.Drawing.Point(612, 505);
@@ -110,29 +117,30 @@
             // 
             this.AT1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.AT1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 20;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.AT1.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 20;
+            animation4.Padding = new System.Windows.Forms.Padding(30);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.AT1.DefaultAnimation = animation4;
             // 
             // PictureMain
             // 
             this.PictureMain.BackColor = System.Drawing.Color.Transparent;
             this.PictureMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AT1.SetDecoration(this.PictureMain, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.PictureMain, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.PictureMain, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.PictureMain, BunifuAnimatorNS.DecorationType.None);
             this.PictureMain.Image = ((System.Drawing.Image)(resources.GetObject("PictureMain.Image")));
             this.PictureMain.Location = new System.Drawing.Point(210, 92);
             this.PictureMain.Name = "PictureMain";
@@ -146,8 +154,9 @@
             // BOTC
             // 
             this.BOTC.BackColor = System.Drawing.Color.Transparent;
-            this.AT1.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
             this.BOTC.Image = ((System.Drawing.Image)(resources.GetObject("BOTC.Image")));
             this.BOTC.Location = new System.Drawing.Point(509, 63);
             this.BOTC.Name = "BOTC";
@@ -159,8 +168,9 @@
             // PlayerC
             // 
             this.PlayerC.BackColor = System.Drawing.Color.Transparent;
-            this.AT1.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
             this.PlayerC.Image = ((System.Drawing.Image)(resources.GetObject("PlayerC.Image")));
             this.PlayerC.Location = new System.Drawing.Point(162, 63);
             this.PlayerC.Name = "PlayerC";
@@ -171,8 +181,9 @@
             // 
             // circularPictureBox2
             // 
-            this.AT1.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.circularPictureBox2.Location = new System.Drawing.Point(506, 56);
             this.circularPictureBox2.Name = "circularPictureBox2";
             this.circularPictureBox2.Size = new System.Drawing.Size(182, 177);
@@ -182,8 +193,9 @@
             // 
             // circularPictureBox1
             // 
-            this.AT1.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.circularPictureBox1.Location = new System.Drawing.Point(210, 56);
             this.circularPictureBox1.Name = "circularPictureBox1";
             this.circularPictureBox1.Size = new System.Drawing.Size(182, 177);
@@ -193,8 +205,9 @@
             // 
             // paper
             // 
-            this.AT1.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
             this.paper.Image = ((System.Drawing.Image)(resources.GetObject("paper.Image")));
             this.paper.Location = new System.Drawing.Point(643, 278);
             this.paper.Name = "paper";
@@ -206,8 +219,9 @@
             // 
             // Scissors
             // 
-            this.AT1.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
             this.Scissors.Image = ((System.Drawing.Image)(resources.GetObject("Scissors.Image")));
             this.Scissors.Location = new System.Drawing.Point(349, 278);
             this.Scissors.Name = "Scissors";
@@ -219,8 +233,9 @@
             // 
             // Rock
             // 
-            this.AT1.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
             this.Rock.Image = ((System.Drawing.Image)(resources.GetObject("Rock.Image")));
             this.Rock.Location = new System.Drawing.Point(42, 278);
             this.Rock.Name = "Rock";
@@ -234,8 +249,9 @@
             // 
             this.CB.BackColor = System.Drawing.Color.Transparent;
             this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
             this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
             this.CB.Location = new System.Drawing.Point(195, 45);
             this.CB.Name = "CB";
@@ -245,32 +261,12 @@
             this.CB.TabStop = false;
             this.CB.Click += new System.EventHandler(this.CB_Click);
             // 
-            // AT2
-            // 
-            this.AT2.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
-            this.AT2.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(50);
-            animation2.RotateCoeff = 1F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.AT2.DefaultAnimation = animation2;
-            // 
             // PLAYERNAME
             // 
             this.PLAYERNAME.AutoSize = true;
-            this.AT1.SetDecoration(this.PLAYERNAME, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.PLAYERNAME, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.PLAYERNAME, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.PLAYERNAME, BunifuAnimatorNS.DecorationType.None);
             this.PLAYERNAME.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold);
             this.PLAYERNAME.ForeColor = System.Drawing.Color.Navy;
             this.PLAYERNAME.Location = new System.Drawing.Point(12, 125);
@@ -282,8 +278,9 @@
             // BOTNAME
             // 
             this.BOTNAME.AutoSize = true;
-            this.AT1.SetDecoration(this.BOTNAME, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this.BOTNAME, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.BOTNAME, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.BOTNAME, BunifuAnimatorNS.DecorationType.None);
             this.BOTNAME.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold);
             this.BOTNAME.ForeColor = System.Drawing.Color.Maroon;
             this.BOTNAME.Location = new System.Drawing.Point(721, 125);
@@ -292,10 +289,67 @@
             this.BOTNAME.TabIndex = 8;
             this.BOTNAME.Text = "BOT";
             // 
+            // AT2
+            // 
+            this.AT2.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
+            this.AT2.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(50);
+            animation5.RotateCoeff = 1F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 1F;
+            this.AT2.DefaultAnimation = animation5;
+            // 
+            // CountDownCC
+            // 
+            this.CountDownCC.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.CountDownCC.Enabled = false;
+            this.CountDownCC.Location = new System.Drawing.Point(266, 246);
+            this.CountDownCC.Name = "CountDownCC";
+            this.CountDownCC.Size = new System.Drawing.Size(341, 296);
+            this.CountDownCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CountDownCC.TabIndex = 9;
+            this.CountDownCC.TabStop = false;
+            // 
+            // AT3
+            // 
+            this.AT3.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
+            this.AT3.Cursor = null;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(50);
+            animation6.RotateCoeff = 1F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 1F;
+            this.AT3.DefaultAnimation = animation6;
+            // 
             // Game
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(846, 572);
+            this.Controls.Add(this.CountDownCC);
             this.Controls.Add(this.BOTNAME);
             this.Controls.Add(this.PLAYERNAME);
             this.Controls.Add(this.CB);
@@ -310,8 +364,9 @@
             this.Controls.Add(this.BACKGROUNDGAMESTART);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.circularPictureBox2);
-            this.AT2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.AT3.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.AT1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Game";
@@ -327,6 +382,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Scissors)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +407,7 @@
         public CircularPictureBox BOTC;
         private System.Windows.Forms.Label PLAYERNAME;
         private System.Windows.Forms.Label BOTNAME;
+        private CircularPictureBox CountDownCC;
+        private BunifuAnimatorNS.BunifuTransition AT3;
     }
 }

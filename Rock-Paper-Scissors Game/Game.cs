@@ -20,7 +20,6 @@ namespace Rock_Paper_Scissors_Game
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
             Closepicture();
-
         }
         async Task Closepicture()
         {
@@ -216,6 +215,20 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
             }
+        }
+
+        async Task CountDownStart()
+        {
+            CountDownCC.Visible = false;
+            CountDownCC.Enabled = true;
+            if (CountDownCC.Visible = false)
+            {
+                AT3.ShowSync(CountDownCC);
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+                Time1second();
+                this.CountDownCC.Load("");
+            }
+
         }
 
         async private void Scissors_Click(object sender, EventArgs e)
