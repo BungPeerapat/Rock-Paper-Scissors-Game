@@ -200,6 +200,7 @@ namespace Rock_Paper_Scissors_Game
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ฮัลโหล.wav");
             Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
+            Rock.
         }
 
         private void Scissors_Click(object sender, EventArgs e)
