@@ -320,25 +320,9 @@ namespace Rock_Paper_Scissors_Game
                 string BG = "Paper";
             }
         }
-
-        public enum PGC { Rock, Scissors, Paper }
         async Task LogicCalculator()
         {
-            if (PG == "Rock") //ถ้าออกค้อน ****************************************
-            {
-                if (BG == "Scissors")
-                {
-                    MessageBox.Show("You Win!!!!");
-                }
-                if (BG == "Paper")
-                {
-                    MessageBox.Show("You Lose!!!!");
-                }
-                if (BG == "Rock")
-                {
-                    MessageBox.Show("Draw!!!!");
-                }
-            }
+
         }
     }
 }
