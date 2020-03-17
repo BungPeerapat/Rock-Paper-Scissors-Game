@@ -211,10 +211,10 @@ namespace Rock_Paper_Scissors_Game
                 AT1.HideSync(Rock);
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                Time1second();
+                await Time1second();
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                CountDownStart();
+                await CountDownStart();
             }
         }
 
@@ -225,16 +225,19 @@ namespace Rock_Paper_Scissors_Game
             if (CountDownCC.Visible == false)
             {
                 AT3.ShowSync(CountDownCC);
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
-                this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 1.jpg");
-                Time1second();
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
-                this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 2.jpg");
-                Time1second();
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
-                this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 3.jpg");
             }
-
+            SpeakerCute2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\1-3.wav");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+            this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 1.jpg");
+            await Time2second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+            this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 2.jpg");
+            await Time2second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+            this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 3.jpg");
+            await Time1second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
+            await Time1second();
         }
 
         async private void Scissors_Click(object sender, EventArgs e)
@@ -250,10 +253,10 @@ namespace Rock_Paper_Scissors_Game
                 AT1.HideSync(Scissors);
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                Time1second();
+                await Time1second();
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                CountDownStart();
+                await CountDownStart();
             }
         }
 
@@ -270,10 +273,10 @@ namespace Rock_Paper_Scissors_Game
                 AT1.HideSync(paper);
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                Time1second();
+                await Time1second();
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                CountDownStart();
+                await CountDownStart();
             }
         }
     }
