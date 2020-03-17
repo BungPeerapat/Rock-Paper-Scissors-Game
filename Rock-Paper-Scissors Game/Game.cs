@@ -198,28 +198,6 @@ namespace Rock_Paper_Scissors_Game
             Scissors.Enabled = false;
             paper.Enabled = false;
         }
-        async private void Rock_Click(object sender, EventArgs e)
-        {
-            paper.Hide();
-            Scissors.Hide();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-            PictureEnablefalse();
-            await Time2second();
-            Rock.Visible = true;
-            if (Rock.Visible == true)
-            {
-                AT1.HideSync(Rock);
-                this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                await Time1second();
-                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                await CountDownStart();
-                string PC = "Rock";
-                botgeneration();
-            }
-        }
-
         async Task CountDownStart()
         {
             CountDownCC.Visible = false;
@@ -241,8 +219,29 @@ namespace Rock_Paper_Scissors_Game
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
             await Time1second();
         }
+        async private void Rock_Click(object sender, EventArgs e) //ออกค้อน***********************
+        {
+            paper.Hide();
+            Scissors.Hide();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+            PictureEnablefalse();
+            await Time2second();
+            Rock.Visible = true;
+            if (Rock.Visible == true)
+            {
+                AT1.HideSync(Rock);
+                this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                await Time1second();
+                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                await CountDownStart();
+                string PG = "Rock";
+                botgeneration();
+            }
+        }
 
-        async private void Scissors_Click(object sender, EventArgs e)
+        async private void Scissors_Click(object sender, EventArgs e) //ออกกรรไกร****************
         {
             Rock.Hide();
             paper.Hide();
@@ -259,12 +258,12 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
-                string PC = "Scissors";
+                string PG = "Scissors";
                 botgeneration();
             }
         }
 
-        async private void paper_Click(object sender, EventArgs e)
+        async private void paper_Click(object sender, EventArgs e) //ออกกระดาษ******************************
         {
             Rock.Hide();
             Scissors.Hide();
@@ -281,34 +280,42 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
-                string PC = "Paper";
+                string PG = "Paper";
                 await Time1second();
                 botgeneration();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
-        //โดยที่ 1 = Rock / 2 = Scissors / 3 = paper //***
+        //โดยที่ 1 = Rock / 2 = Scissors / 3 = Paper //***
         async Task botgeneration()
         {
-            string PlayerChoose, BOTChoose;
             Random botrandomnumber = new Random();
             int botchoose = botrandomnumber.Next(1, 3);
             if (botchoose == 1)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                string BG = "Rock";
             }
             if (botchoose == 2)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                string BG = "Scissors";
             }
             if (botchoose == 3)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                string BG = "Paper";
             }
+        }
+        async Task LogicCalculator()
+        {
+            if ((PG) == (BG))
+            {
 
+            }
         }
     }
 }
