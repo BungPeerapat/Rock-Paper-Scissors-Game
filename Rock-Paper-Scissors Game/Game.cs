@@ -56,9 +56,8 @@ namespace Rock_Paper_Scissors_Game
         WMPLib.WindowsMediaPlayer FS2;
         WMPLib.WindowsMediaPlayer Start;
         WMPLib.WindowsMediaPlayer Player2;
-        private readonly object BG;
-        private readonly object PC;
-        private readonly object PG;
+        private string BG;
+        private string PG;
         private readonly string botchoose;
 
         private void SpeakerCute1(string url)
@@ -243,7 +242,7 @@ namespace Rock_Paper_Scissors_Game
                 await CountDownStart();
                 string PG = "Rock";
                 await Time2second();
-                botgeneration();
+                await botgeneration();
                 await PGROCK();
                 if (BG == "Rock")
                 {
@@ -321,13 +320,13 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BG = "Rock";
             }
-            if (botchoose == 2)
+            else if (botchoose == 2)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BG = "Scissors";
             }
-            if (botchoose == 3)
+            else
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
