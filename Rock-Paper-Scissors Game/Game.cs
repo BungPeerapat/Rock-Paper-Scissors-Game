@@ -322,7 +322,21 @@ namespace Rock_Paper_Scissors_Game
         }
         async Task LogicCalculator()
         {
-
+            if (PG == "Rock")
+            {
+                if (BG == "Paper")
+                {
+                    MessageBox.Show("Lose");
+                }
+                if (BG == "Rock")
+                {
+                    MessageBox.Show("Win");
+                }
+                if (BG == "Scissors")
+                {
+                    MessageBox.Show("Win");
+                }
+            }
         }
     }
 }
