@@ -215,6 +215,7 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
+                string PC = "Rock";
             }
         }
 
@@ -257,6 +258,7 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
+                string PC = "Scissors";
             }
         }
 
@@ -277,7 +279,29 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
+                string PC = "Paper";
             }
+        }
+        //สร้างระบบเกม****************************************************************************************************
+        //โดยที่ 1 = Rock / 2 = Scissors / 3 = paper //***
+        async Task GameDetail()
+        {
+            string PlayerChoose, BOTChoose;
+            Random botrandomnumber = new Random();
+            int botchoose = botrandomnumber.Next(1, 3);
+            if (botchoose == 1)
+            {
+                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
+            }
+            if (botchoose == 2)
+            {
+                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
+            }
+            if (botchoose == 3)
+            {
+                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
+            }
+
         }
     }
 }
