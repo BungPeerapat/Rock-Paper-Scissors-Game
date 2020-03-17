@@ -243,7 +243,7 @@ namespace Rock_Paper_Scissors_Game
                 string PG = "Rock";
                 await Time2second();
                 botgeneration();
-                LogicCalculator(;
+                LogicCalculator();
             }
         }
 
@@ -320,31 +320,23 @@ namespace Rock_Paper_Scissors_Game
                 string BG = "Paper";
             }
         }
+
+        public enum PGC { Rock, Scissors, Paper }
         async Task LogicCalculator()
         {
-            if (BG == PG) // Draw *************************************
+            if (PG == "Rock") //ถ้าออกค้อน ****************************************
             {
-                MessageBox.Show("Draw!!!!");
-                Console.Beep();
-            }
-            else
-            {
-                if (PG == "Rock") //ค้าออกค้อน ****************************************
+                if (BG == "Scissors")
                 {
-                    if (BG == "Scissors")
-                    {
-                        MessageBox.Show("You Win!!!!");
-                        Console.Beep();
-                        Console.Beep();
-                    }
-                    else
-                    {
-                        if (BG == "Paper")
-                        {
-                            MessageBox.Show("You Lose!!!!");
-                                Console.Beep();
-                        }
-                    }
+                    MessageBox.Show("You Win!!!!");
+                }
+                if (BG == "Paper")
+                {
+                    MessageBox.Show("You Lose!!!!");
+                }
+                if (BG == "Rock")
+                {
+                    MessageBox.Show("Draw!!!!");
                 }
             }
         }
