@@ -241,7 +241,9 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
                 string PG = "Rock";
+                await Time2second();
                 botgeneration();
+                LogicCalculator(;
             }
         }
 
@@ -263,7 +265,9 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
                 string PG = "Scissors";
+                await Time2second();
                 botgeneration();
+                LogicCalculator();
             }
         }
 
@@ -286,7 +290,9 @@ namespace Rock_Paper_Scissors_Game
                 await CountDownStart();
                 string PG = "Paper";
                 await Time1second();
+                await Time2second();
                 botgeneration();
+                LogicCalculator();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
