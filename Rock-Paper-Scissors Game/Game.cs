@@ -317,6 +317,10 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Scissors";
+                if (BGF == "Scissors")
+                {
+                    Console.Beep();
+                }
                 PGROCK();
             }
             else
@@ -324,6 +328,10 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Paper";
+                if (BGF == "Paper")
+                {
+                    Console.Beep();
+                }
                 PGROCK();
             }
         }
