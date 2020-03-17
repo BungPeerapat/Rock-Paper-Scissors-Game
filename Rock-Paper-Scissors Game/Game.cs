@@ -216,6 +216,7 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
                 string PC = "Rock";
+                botgeneration();
             }
         }
 
@@ -259,6 +260,7 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
                 string PC = "Scissors";
+                botgeneration();
             }
         }
 
@@ -280,11 +282,13 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
                 string PC = "Paper";
+                await Time1second();
+                botgeneration();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
         //โดยที่ 1 = Rock / 2 = Scissors / 3 = paper //***
-        async Task GameDetail()
+        async Task botgeneration()
         {
             string PlayerChoose, BOTChoose;
             Random botrandomnumber = new Random();
