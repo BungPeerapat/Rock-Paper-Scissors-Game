@@ -59,6 +59,7 @@ namespace Rock_Paper_Scissors_Game
         private readonly object BG;
         private readonly object PC;
         private readonly object PG;
+        private readonly string botchoose;
 
         private void SpeakerCute1(string url)
         {
@@ -243,7 +244,22 @@ namespace Rock_Paper_Scissors_Game
                 string PG = "Rock";
                 await Time2second();
                 botgeneration();
-                LogicCalculator();
+                await PGROCK();
+                if (BG == "Rock")
+                {
+                    Console.Beep();
+                }
+                if (BG == "Paper")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                }
+                if (BG == "Scissors")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                }
             }
         }
 
@@ -267,7 +283,6 @@ namespace Rock_Paper_Scissors_Game
                 string PG = "Scissors";
                 await Time2second();
                 botgeneration();
-                LogicCalculator();
             }
         }
 
@@ -292,7 +307,6 @@ namespace Rock_Paper_Scissors_Game
                 await Time1second();
                 await Time2second();
                 botgeneration();
-                LogicCalculator();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
@@ -320,22 +334,19 @@ namespace Rock_Paper_Scissors_Game
                 string BG = "Paper";
             }
         }
-        async Task LogicCalculator()
+        async Task PGROCK()
         {
-            if (PG == "Rock")
+            if (PG == "Rock" && BG == "Rock")
             {
-                if (BG == "Paper")
-                {
-                    MessageBox.Show("Lose");
-                }
-                if (BG == "Rock")
-                {
-                    MessageBox.Show("Win");
-                }
-                if (BG == "Scissors")
-                {
-                    MessageBox.Show("Win");
-                }
+                MessageBox.Show("Draw");
+            }
+            else if (PG == "Rock" && BG == "Scissors")
+            {
+                MessageBox.Show("Win");
+            }
+            else if (PG == "Rock" && BG == "Paper")
+            {
+                MessageBox.Show("Lose");
             }
         }
     }
