@@ -227,11 +227,13 @@ namespace Rock_Paper_Scissors_Game
             //คำนวน Zone *************************
             await CountDown();
             //คำนวน Zone *************************
-            await Time1second();
-            await ChackVar()
 
         }
-        async Task CountDown()
+        async Task Calculator()  //Codeing สำหรับการดูว่าใครชนะ!****************************************
+        {
+
+        }
+        async Task CountDown() //Coding CountDown!*******************************************
         {
             Random botrandomnumber = new Random();
             int botchoose = botrandomnumber.Next(1, 4);
@@ -268,11 +270,15 @@ namespace Rock_Paper_Scissors_Game
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await Time1second();
-                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                await BOTCLOADING();
                 await CountDownStart();
                 string PG = "Rock";
             }
+        }
+        async Task BOTCLOADING()
+        {
+            this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
         }
         async private void Scissors_Click(object sender, EventArgs e) //ออกกรรไกร****************
         {
@@ -288,14 +294,9 @@ namespace Rock_Paper_Scissors_Game
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await Time1second();
-                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                await BOTCLOADING();
                 await CountDownStart();
                 string PG = "Scissors";
-                await Time2second();
-                CountDownCC.Enabled = true;
-                await Time2second();
-
             }
         }
 
@@ -313,12 +314,9 @@ namespace Rock_Paper_Scissors_Game
                 this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await Time1second();
-                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Question.jpg");
-                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                await BOTCLOADING();
                 await CountDownStart();
                 string PG = "Paper";
-                await Time1second();
-                await Time2second();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
