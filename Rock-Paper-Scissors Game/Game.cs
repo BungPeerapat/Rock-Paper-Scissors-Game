@@ -296,14 +296,17 @@ namespace Rock_Paper_Scissors_Game
             if (botchoose == 1)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
             }
             if (botchoose == 2)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
             }
             if (botchoose == 3)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
             }
 
         }
