@@ -56,7 +56,7 @@ namespace Rock_Paper_Scissors_Game
         WMPLib.WindowsMediaPlayer FS2;
         WMPLib.WindowsMediaPlayer Start;
         WMPLib.WindowsMediaPlayer Player2;
-        private string BG;
+        private string BGF;
         private string PG;
         private readonly string botchoose;
 
@@ -244,16 +244,16 @@ namespace Rock_Paper_Scissors_Game
                 await Time2second();
                 await botgeneration();
                 await PGROCK();
-                if (BG == "Rock")
+                if (BGF == "Rock")
                 {
                     Console.Beep();
                 }
-                if (BG == "Paper")
+                else if (BGF == "Paper")
                 {
                     Console.Beep();
                     Console.Beep();
                 }
-                if (BG == "Scissors")
+                else
                 {
                     Console.Beep();
                     Console.Beep();
@@ -318,32 +318,32 @@ namespace Rock_Paper_Scissors_Game
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                string BG = "Rock";
+                string BGF = "Rock";
             }
             else if (botchoose == 2)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                string BG = "Scissors";
+                string BGF = "Scissors";
             }
             else
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
-                string BG = "Paper";
+                string BGF = "Paper";
             }
         }
         async Task PGROCK()
         {
-            if (PG == "Rock" && BG == "Rock")
+            if (PG == "Rock" && BGF == "Rock")
             {
                 MessageBox.Show("Draw");
             }
-            else if (PG == "Rock" && BG == "Scissors")
+            else if (PG == "Rock" && BGF == "Scissors")
             {
                 MessageBox.Show("Win");
             }
-            else if (PG == "Rock" && BG == "Paper")
+            else if (PG == "Rock" && BGF == "Paper")
             {
                 MessageBox.Show("Lose");
             }
