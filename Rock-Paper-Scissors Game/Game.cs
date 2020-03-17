@@ -56,9 +56,11 @@ namespace Rock_Paper_Scissors_Game
         WMPLib.WindowsMediaPlayer FS2;
         WMPLib.WindowsMediaPlayer Start;
         WMPLib.WindowsMediaPlayer Player2;
-        private string BGF;
         private string PG;
         private readonly string botchoose;
+
+        public string BGF { get; private set; }
+        public int x { get; private set; }
 
         private void SpeakerCute1(string url)
         {
@@ -244,21 +246,6 @@ namespace Rock_Paper_Scissors_Game
                 await Time2second();
                 await botgeneration();
                 await PGROCK();
-                if (BGF == "Rock")
-                {
-                    Console.Beep();
-                }
-                else if (BGF == "Paper")
-                {
-                    Console.Beep();
-                    Console.Beep();
-                }
-                else
-                {
-                    Console.Beep();
-                    Console.Beep();
-                    Console.Beep();
-                }
             }
         }
 
@@ -313,37 +300,40 @@ namespace Rock_Paper_Scissors_Game
         async Task botgeneration()
         {
             Random botrandomnumber = new Random();
-            int botchoose = botrandomnumber.Next(1, 3);
+            int botchoose = botrandomnumber.Next(1, 4);
             if (botchoose == 1)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Rock";
+                PGROCK();
             }
             else if (botchoose == 2)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Scissors";
+                PGROCK();
             }
             else
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Paper";
+                PGROCK();
             }
         }
         async Task PGROCK()
         {
-            if (PG == "Rock" && BGF == "Rock")
+            if (PG =="Rock" && BGF == "Rock")
             {
                 MessageBox.Show("Draw");
             }
-            else if (PG == "Rock" && BGF == "Scissors")
+            else if (PG =="Rock" && BGF =="Scissors")
             {
                 MessageBox.Show("Win");
             }
-            else if (PG == "Rock" && BGF == "Paper")
+            else if (PG =="Rock" && BGF =="Paper")
             {
                 MessageBox.Show("Lose");
             }
