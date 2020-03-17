@@ -56,6 +56,10 @@ namespace Rock_Paper_Scissors_Game
         WMPLib.WindowsMediaPlayer FS2;
         WMPLib.WindowsMediaPlayer Start;
         WMPLib.WindowsMediaPlayer Player2;
+        private readonly object BG;
+        private readonly object PC;
+        private readonly object PG;
+
         private void SpeakerCute1(string url)
         {
             FS1 = new WMPLib.WindowsMediaPlayer();
@@ -312,9 +316,30 @@ namespace Rock_Paper_Scissors_Game
         }
         async Task LogicCalculator()
         {
-            if ((PG) == (BG))
+            if (BG == PG) // Draw *************************************
             {
-
+                MessageBox.Show("Draw!!!!");
+                Console.Beep();
+            }
+            else
+            {
+                if (PG == "Rock") //ค้าออกค้อน ****************************************
+                {
+                    if (BG == "Scissors")
+                    {
+                        MessageBox.Show("You Win!!!!");
+                        Console.Beep();
+                        Console.Beep();
+                    }
+                    else
+                    {
+                        if (BG == "Paper")
+                        {
+                            MessageBox.Show("You Lose!!!!");
+                                Console.Beep();
+                        }
+                    }
+                }
             }
         }
     }
