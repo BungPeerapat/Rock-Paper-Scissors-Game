@@ -306,6 +306,10 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Rock";
+                if (BGF == "Rock")
+                {
+                    Console.Beep();
+                }
                 PGROCK();
             }
             else if (botchoose == 2)
@@ -325,15 +329,15 @@ namespace Rock_Paper_Scissors_Game
         }
         async Task PGROCK()
         {
-            if (PG =="Rock" && BGF == "Rock")
+            if (PG == "Rock" && BGF == "Rock")
             {
                 MessageBox.Show("Draw");
             }
-            else if (PG =="Rock" && BGF =="Scissors")
+            else if (PG == "Rock" && BGF =="Scissors")
             {
                 MessageBox.Show("Win");
             }
-            else if (PG =="Rock" && BGF =="Paper")
+            else if (PG == "Rock" && BGF =="Paper")
             {
                 MessageBox.Show("Lose");
             }
