@@ -105,7 +105,7 @@ namespace Rock_Paper_Scissors_Game
         }
         private void BGGAMESTART_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CB1_Click(object sender, EventArgs e)
@@ -222,7 +222,6 @@ namespace Rock_Paper_Scissors_Game
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 3.jpg");
             await Time1second();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
             await Time1second();
         }
         async private void Rock_Click(object sender, EventArgs e) //ออกค้อน***********************
@@ -243,9 +242,6 @@ namespace Rock_Paper_Scissors_Game
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 await CountDownStart();
                 string PG = "Rock";
-                await Time2second();
-                await botgeneration();
-                await PGROCK();
             }
         }
 
@@ -268,7 +264,7 @@ namespace Rock_Paper_Scissors_Game
                 await CountDownStart();
                 string PG = "Scissors";
                 await Time2second();
-                botgeneration();
+                CountDownCC.Enabled = true;
             }
         }
 
@@ -292,13 +288,13 @@ namespace Rock_Paper_Scissors_Game
                 string PG = "Paper";
                 await Time1second();
                 await Time2second();
-                botgeneration();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
         //โดยที่ 1 = Rock / 2 = Scissors / 3 = Paper //***
-        async Task botgeneration()
+        private void CountDownCC_Click(object sender, EventArgs e)
         {
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
             Random botrandomnumber = new Random();
             int botchoose = botrandomnumber.Next(1, 4);
             if (botchoose == 1)
@@ -306,49 +302,113 @@ namespace Rock_Paper_Scissors_Game
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Rock";
-                if (BGF == "Rock")
-                {
-                    Console.Beep();
-                }
-                PGROCK();
             }
             else if (botchoose == 2)
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Scissors";
-                if (BGF == "Scissors")
+                if (BGF == "Rock")
                 {
                     Console.Beep();
                 }
-                PGROCK();
+                if (BGF == "Paper")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                }
+                if (BGF == "Scissors")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                }
             }
             else
             {
                 this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กระดาษ.png");
                 SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
                 string BGF = "Paper";
-                if (BGF == "Paper")
+                if (BGF == "Rock")
                 {
                     Console.Beep();
                 }
-                PGROCK();
+                if (BGF == "Paper")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                }
+                if (BGF == "Scissors")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                }
             }
         }
         async Task PGROCK()
         {
-            if (PG == "Rock" && BGF == "Rock")
+            if (BGF == "Rock")
             {
-                MessageBox.Show("Draw");
+                Console.Beep();
             }
-            else if (PG == "Rock" && BGF =="Scissors")
+            if (BGF == "Paper")
             {
-                MessageBox.Show("Win");
+                Console.Beep();
+                Console.Beep();
             }
-            else if (PG == "Rock" && BGF =="Paper")
+            if (BGF == "Scissors")
             {
-                MessageBox.Show("Lose");
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+            }
+        }
+
+        private void CountDownCC_Click_1(object sender, EventArgs e)
+        {
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
+            Random botrandomnumber = new Random();
+            int botchoose = botrandomnumber.Next(1, 4);
+            if (botchoose == 1)
+            {
+                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ค้อน.png");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                string BGF = "Rock";
+            }
+            else if (botchoose == 2)
+            {
+                this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\กรรไกร.png");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\pop.wav");
+                string BGF = "Scissors";
+                if (BGF == "Rock")
+                {
+                    Console.Beep();
+                }
+                if (BGF == "Paper")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                }
+                if (BGF == "Scissors")
+                {
+                    Console.Beep();
+                    Console.Beep();
+                    Console.Beep();
+                }
             }
         }
     }
 }
+//            if (PG == "Rock" && BGF == "Rock")
+//            {
+//                MessageBox.Show("Draw");
+//            }
+//            else if (PG == "Rock" && BGF == "Scissors")
+//            {
+//                MessageBox.Show("Win");
+//            }
+//            else if (PG == "Rock" && BGF == "Paper")
+//            {
+//                MessageBox.Show("Lose");
+//            }

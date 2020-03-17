@@ -227,6 +227,7 @@
             this.AT3.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
             this.AT2.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
             this.AT1.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.CountDownCC.Enabled = false;
             this.CountDownCC.Location = new System.Drawing.Point(298, 258);
             this.CountDownCC.Name = "CountDownCC";
             this.CountDownCC.Size = new System.Drawing.Size(271, 221);
@@ -234,6 +235,7 @@
             this.CountDownCC.TabIndex = 9;
             this.CountDownCC.TabStop = false;
             this.CountDownCC.Visible = false;
+            this.CountDownCC.Click += new System.EventHandler(this.CountDownCC_Click_1);
             // 
             // CB
             // 
