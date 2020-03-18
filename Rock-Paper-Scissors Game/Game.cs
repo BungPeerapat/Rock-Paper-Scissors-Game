@@ -32,6 +32,8 @@ namespace Rock_Paper_Scissors_Game
             BOTNAME.Hide();
             POINTPLAYER.Hide();
             POINTBOT.Hide();
+            POINTNUMBERBOT.Visible = true;
+            POINTNUMBERPLAYER.Visible = true;
         }
         async Task Time05second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
@@ -122,10 +124,12 @@ namespace Rock_Paper_Scissors_Game
             Form1 Menu = new Form1();
             Menu.Show();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e) //เอาไว้เป่าใหม่ /////ยังไม่เสร๊จเลยยยยยยยยยยยยย
         {
 
+            Visibleturerps(); //เปิดภาพค้อนกรรไกรกระดาษ
+            Time2second();
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
         async Task AnimationOpen() //Delay For Start Animation
         {
@@ -325,6 +329,7 @@ namespace Rock_Paper_Scissors_Game
                 PG = "Rock";
                 //ระบบ RandomNumber
                 RandomNumber();
+                ChackVar();
                 //ระบบ RandomNumber
                 //ตัวตัดสิน Zone ************************
                 Calculator();
@@ -431,3 +436,4 @@ namespace Rock_Paper_Scissors_Game
 // นี่จจากบุ๊งเมื่อ 10 ชั่วโมงที่แล้วนะ หวัดดีบุ๊งในอีก 10 ชั่วโมงข้างหน้าพอดีเราแก้ฟังชั่นให้แล้ว
 // ทืี่เหลือนายต้องไปทำ ให้ BOT
 // เพิ่มคะแนนให้เวลาชนะหรือแพ้นะ จุๆ เดาว่าต้องใช้คำว่า if (POINTNUMBER == 1) แล้วให้เปลี่ยนตัวอักษรคะแนนนะ ไปเล่น Unturned ละ เต็มเท่าไรแล้วแต่นายเลย
+// แก้ตรง private void pictureBox1_Click(object sender, EventArgs e) นี้ด้วยยังทำไม่เสร๊จบัคกระจุยเลยนะ
