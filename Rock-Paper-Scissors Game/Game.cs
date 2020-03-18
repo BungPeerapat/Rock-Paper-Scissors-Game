@@ -226,7 +226,7 @@ namespace Rock_Paper_Scissors_Game
             await Time2second();
 
         }
-        async Task Calculator()  //Codeing สำหรับการดูว่าใครชนะ!****************************************
+        async Task Calculator()  //Codeing ตัวตัดสิน!****************************************
         {
             //PG - Player
             //BGF - BotGeneration
@@ -295,7 +295,7 @@ namespace Rock_Paper_Scissors_Game
                 await Time1second();
                 await BOTCLOADING();
                 await CountDownStart();
-                string PG = "Rock";
+                PG = "Rock";
                 //ระบบ RandomNumber
                 RandomNumber();
                 //ระบบ RandomNumber
@@ -325,7 +325,7 @@ namespace Rock_Paper_Scissors_Game
                 await Time1second();
                 await BOTCLOADING();
                 await CountDownStart();
-                string PG = "Scissors";
+                PG = "Scissors";
             }
         }
 
@@ -345,7 +345,7 @@ namespace Rock_Paper_Scissors_Game
                 await Time1second();
                 await BOTCLOADING();
                 await CountDownStart();
-                string PG = "Paper";
+                PG = "Paper";
             }
         }
         //สร้างระบบเกม****************************************************************************************************
