@@ -229,7 +229,7 @@ namespace Rock_Paper_Scissors_Game
             //คำนวน Zone *************************
             //ตัวตัดสิน Zone ************************
 
-            await Calculator();
+            Calculator();
 
             //ตัวตัดสิน Zone ************************
 
@@ -238,19 +238,19 @@ namespace Rock_Paper_Scissors_Game
         {
             //PG - Player
             //BGF - BotGeneration
-            if (PG == BGF)
+            if (PG == "Rock" && BGF == "Rock")
             {
                 MessageBox.Show("Draw!!!");
-            }
-            else if (PG == "Rock" && BGF == "Scissors")
+            }else if (PG == "Paper" && BGF == "Paper")
             {
-                MessageBox.Show("You Win!!!");
-            }
-            else if (PG == "Rock" && BGF == "Paper")
+                MessageBox.Show("Draw!!!");
+            }else if (PG == "Scissors" && BGF == "Scissors")
+            {
+                MessageBox.Show("Draw!!!");
+            }else if (PG == "Rock" && BGF == "Paper")
             {
                 MessageBox.Show("You Lose!!!");
-            }
-            else if (PG == "Paper" && BGF == "Rock")
+            }else if (PG == "Paper" && BGF == "Rock")
             {
                 MessageBox.Show("You Win!!");
             }else if (PG == "Paper" && BGF == "Scissors")
@@ -259,12 +259,12 @@ namespace Rock_Paper_Scissors_Game
             }else if (PG == "Scissors" && BGF == "Paer")
             {
                 MessageBox.Show("You Win!!!");
-            }else if (PG == "Scissors" && BGF == "Rock")
+            }else
             {
                 MessageBox.Show("You Lose!!!");
             }
         }
-        async Task CountDown() //Codeing For Random.!*******************************************
+        public async Task CountDown() //Codeing For Random.!*******************************************
         {
             Random botrandomnumber = new Random();
             int botchoose = botrandomnumber.Next(1, 4);
