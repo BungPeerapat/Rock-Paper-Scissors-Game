@@ -227,13 +227,35 @@ namespace Rock_Paper_Scissors_Game
             //คำนวน Zone *************************
             await CountDown();
             //คำนวน Zone *************************
+            //ตัวตัดสิน Zone ************************
+
+            await Calculator();
+
+            //ตัวตัดสิน Zone ************************
 
         }
         async Task Calculator()  //Codeing สำหรับการดูว่าใครชนะ!****************************************
         {
-
+            //PG - Player
+            //BGF - BotGeneration
+            if (PG == BGF)
+            {
+                MessageBox.Show("Draw!!!");
+                Console.Beep();
+            }else if (PG == "Rock" && BGF == "Scissors")
+            {
+                MessageBox.Show("You Win!!!");
+                Console.Beep();
+                Console.Beep();
+                Console.Beep();
+            }else if (PG == "Rock" && BGF == "Paper")
+            {
+                MessageBox.Show("You Lose!!!");
+                Console.Beep();
+                Console.Beep();
+            }
         }
-        async Task CountDown() //Coding CountDown!*******************************************
+        async Task CountDown() //Codeing For Random.!*******************************************
         {
             Random botrandomnumber = new Random();
             int botchoose = botrandomnumber.Next(1, 4);
