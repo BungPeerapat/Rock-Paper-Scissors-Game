@@ -300,7 +300,7 @@ namespace Rock_Paper_Scissors_Game
                 RandomNumber();
                 //ระบบ RandomNumber
                 //ตัวตัดสิน Zone ************************
-                ChackVar();
+                Calculator();
                 //ตัวตัดสิน Zone ************************
             }
         }
