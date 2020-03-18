@@ -241,18 +241,27 @@ namespace Rock_Paper_Scissors_Game
             if (PG == BGF)
             {
                 MessageBox.Show("Draw!!!");
-                Console.Beep();
-            }else if (PG == "Rock" && BGF == "Scissors")
+            }
+            else if (PG == "Rock" && BGF == "Scissors")
             {
                 MessageBox.Show("You Win!!!");
-                Console.Beep();
-                Console.Beep();
-                Console.Beep();
-            }else if (PG == "Rock" && BGF == "Paper")
+            }
+            else if (PG == "Rock" && BGF == "Paper")
             {
                 MessageBox.Show("You Lose!!!");
-                Console.Beep();
-                Console.Beep();
+            }
+            else if (PG == "Paper" && BGF == "Rock")
+            {
+                MessageBox.Show("You Win!!");
+            }else if (PG == "Paper" && BGF == "Scissors")
+            {
+                MessageBox.Show("You Lose!!!");
+            }else if (PG == "Scissors" && BGF == "Paer")
+            {
+                MessageBox.Show("You Win!!!");
+            }else if (PG == "Scissors" && BGF == "Rock")
+            {
+                MessageBox.Show("You Lose!!!");
             }
         }
         async Task CountDown() //Codeing For Random.!*******************************************
