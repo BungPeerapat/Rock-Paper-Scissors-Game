@@ -127,7 +127,8 @@ namespace Rock_Paper_Scissors_Game
         private void pictureBox1_Click(object sender, EventArgs e) //เอาไว้เป่าใหม่ /////ยังไม่เสร๊จเลยยยยยยยยยยยยย
         {
 
-            Visibleturerps(); //เปิดภาพค้อนกรรไกรกระดาษ
+            this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ANime Male 1.png");
+            this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Himegoto.png");
             Time2second();
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
         }
@@ -137,7 +138,6 @@ namespace Rock_Paper_Scissors_Game
             if (PictureMain.Visible == false)
             {
                 Console.Beep();
-                AT1.ShowSync(PictureMain);
                 await Task.Delay(2000);
                 PictureMain.Visible = true;
             }
