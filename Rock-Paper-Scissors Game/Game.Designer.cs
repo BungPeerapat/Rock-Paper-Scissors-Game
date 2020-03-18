@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
             this.EXIT2 = new System.Windows.Forms.Button();
             this.BACKGROUNDGAMESTART = new System.Windows.Forms.PictureBox();
             this.EXIT = new System.Windows.Forms.Button();
@@ -40,8 +40,6 @@
             this.PictureMain = new System.Windows.Forms.PictureBox();
             this.PLAYERNAME = new System.Windows.Forms.Label();
             this.BOTNAME = new System.Windows.Forms.Label();
-            this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.AT3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.CountDownCC = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.PlayerC = new Rock_Paper_Scissors_Game.CircularPictureBox();
@@ -51,6 +49,12 @@
             this.Rock = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.circularPictureBox1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.circularPictureBox2 = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.AT3 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.POINTPLAYER = new System.Windows.Forms.Label();
+            this.POINTBOT = new System.Windows.Forms.Label();
+            this.POINTNUMBERPLAYER = new System.Windows.Forms.Label();
+            this.POINTNUMBERBOT = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).BeginInit();
@@ -117,22 +121,22 @@
             // 
             this.AT1.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.AT1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 20;
-            animation3.Padding = new System.Windows.Forms.Padding(30);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.AT1.DefaultAnimation = animation3;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 20;
+            animation4.Padding = new System.Windows.Forms.Padding(30);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.AT1.DefaultAnimation = animation4;
             // 
             // PictureMain
             // 
@@ -178,48 +182,6 @@
             this.BOTNAME.Size = new System.Drawing.Size(85, 48);
             this.BOTNAME.TabIndex = 8;
             this.BOTNAME.Text = "BOT";
-            // 
-            // AT2
-            // 
-            this.AT2.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
-            this.AT2.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(50);
-            animation2.RotateCoeff = 1F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.AT2.DefaultAnimation = animation2;
-            // 
-            // AT3
-            // 
-            this.AT3.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
-            this.AT3.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(50);
-            animation1.RotateCoeff = 1F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.AT3.DefaultAnimation = animation1;
             // 
             // CountDownCC
             // 
@@ -347,14 +309,121 @@
             this.circularPictureBox2.TabIndex = 7;
             this.circularPictureBox2.TabStop = false;
             // 
+            // AT2
+            // 
+            this.AT2.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
+            this.AT2.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(50);
+            animation5.RotateCoeff = 1F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 1F;
+            this.AT2.DefaultAnimation = animation5;
+            // 
+            // AT3
+            // 
+            this.AT3.AnimationType = BunifuAnimatorNS.AnimationType.Rotate;
+            this.AT3.Cursor = null;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(50);
+            animation6.RotateCoeff = 1F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 1F;
+            this.AT3.DefaultAnimation = animation6;
+            // 
+            // POINTPLAYER
+            // 
+            this.POINTPLAYER.AutoSize = true;
+            this.POINTPLAYER.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.POINTPLAYER, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.POINTPLAYER, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.POINTPLAYER, BunifuAnimatorNS.DecorationType.None);
+            this.POINTPLAYER.Font = new System.Drawing.Font("Franxurter Totally Fat", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POINTPLAYER.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.POINTPLAYER.Location = new System.Drawing.Point(153, 11);
+            this.POINTPLAYER.Name = "POINTPLAYER";
+            this.POINTPLAYER.Size = new System.Drawing.Size(176, 49);
+            this.POINTPLAYER.TabIndex = 10;
+            this.POINTPLAYER.Text = "POINT : ";
+            // 
+            // POINTBOT
+            // 
+            this.POINTBOT.AutoSize = true;
+            this.POINTBOT.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.POINTBOT, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.POINTBOT, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.POINTBOT, BunifuAnimatorNS.DecorationType.None);
+            this.POINTBOT.Font = new System.Drawing.Font("Franxurter Totally Fat", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POINTBOT.ForeColor = System.Drawing.Color.Maroon;
+            this.POINTBOT.Location = new System.Drawing.Point(500, 11);
+            this.POINTBOT.Name = "POINTBOT";
+            this.POINTBOT.Size = new System.Drawing.Size(176, 49);
+            this.POINTBOT.TabIndex = 10;
+            this.POINTBOT.Text = "POINT : ";
+            // 
+            // POINTNUMBERPLAYER
+            // 
+            this.POINTNUMBERPLAYER.AutoSize = true;
+            this.POINTNUMBERPLAYER.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.POINTNUMBERPLAYER, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.POINTNUMBERPLAYER, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.POINTNUMBERPLAYER, BunifuAnimatorNS.DecorationType.None);
+            this.POINTNUMBERPLAYER.Font = new System.Drawing.Font("Franxurter Totally Fat", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POINTNUMBERPLAYER.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.POINTNUMBERPLAYER.Location = new System.Drawing.Point(303, 11);
+            this.POINTNUMBERPLAYER.Name = "POINTNUMBERPLAYER";
+            this.POINTNUMBERPLAYER.Size = new System.Drawing.Size(47, 49);
+            this.POINTNUMBERPLAYER.TabIndex = 10;
+            this.POINTNUMBERPLAYER.Text = "0";
+            // 
+            // POINTNUMBERBOT
+            // 
+            this.POINTNUMBERBOT.AutoSize = true;
+            this.POINTNUMBERBOT.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.POINTNUMBERBOT, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.POINTNUMBERBOT, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.POINTNUMBERBOT, BunifuAnimatorNS.DecorationType.None);
+            this.POINTNUMBERBOT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.POINTNUMBERBOT.Font = new System.Drawing.Font("Franxurter Totally Fat", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POINTNUMBERBOT.ForeColor = System.Drawing.Color.Maroon;
+            this.POINTNUMBERBOT.Location = new System.Drawing.Point(653, 11);
+            this.POINTNUMBERBOT.Name = "POINTNUMBERBOT";
+            this.POINTNUMBERBOT.Size = new System.Drawing.Size(47, 49);
+            this.POINTNUMBERBOT.TabIndex = 10;
+            this.POINTNUMBERBOT.Text = "0";
+            // 
             // Game
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(846, 572);
+            this.Controls.Add(this.CB);
+            this.Controls.Add(this.POINTNUMBERPLAYER);
+            this.Controls.Add(this.POINTNUMBERBOT);
+            this.Controls.Add(this.POINTBOT);
+            this.Controls.Add(this.POINTPLAYER);
             this.Controls.Add(this.CountDownCC);
             this.Controls.Add(this.BOTNAME);
             this.Controls.Add(this.PLAYERNAME);
-            this.Controls.Add(this.CB);
             this.Controls.Add(this.PlayerC);
             this.Controls.Add(this.BOTC);
             this.Controls.Add(this.paper);
@@ -411,5 +480,9 @@
         private System.Windows.Forms.Label BOTNAME;
         private CircularPictureBox CountDownCC;
         private BunifuAnimatorNS.BunifuTransition AT3;
+        private System.Windows.Forms.Label POINTPLAYER;
+        private System.Windows.Forms.Label POINTBOT;
+        private System.Windows.Forms.Label POINTNUMBERPLAYER;
+        private System.Windows.Forms.Label POINTNUMBERBOT;
     }
 }

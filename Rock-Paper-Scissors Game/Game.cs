@@ -30,6 +30,8 @@ namespace Rock_Paper_Scissors_Game
             BOTC.Hide();
             PLAYERNAME.Hide();
             BOTNAME.Hide();
+            POINTPLAYER.Hide();
+            POINTBOT.Hide();
         }
         async Task Time05second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
@@ -164,6 +166,12 @@ namespace Rock_Paper_Scissors_Game
             BOTC.Show();
             PLAYERNAME.Show();
             BOTNAME.Show();
+            POINTPLAYER.Show();
+            POINTBOT.Show();
+            POINTBOT.Visible = false;
+            POINTPLAYER.Visible = false;
+            POINTNUMBERBOT.Visible = false;
+            POINTNUMBERPLAYER.Visible = false;
             Rock.Visible = false;
             Scissors.Visible = false;
             paper.Visible = false;
@@ -191,11 +199,17 @@ namespace Rock_Paper_Scissors_Game
                 await Time05second();
                 AT2.ShowSync(Scissors);
                 await Time05second();
+                AT2.ShowSync(POINTPLAYER);
+                AT2.ShowSync(POINTBOT);
+                AT2.ShowSync(POINTNUMBERBOT);
+                AT2.ShowSync(POINTNUMBERPLAYER);
                 AT1.ShowSync(PlayerC);
                 AT1.ShowSync(BOTC);
                 AT1.ShowSync(PLAYERNAME);
                 AT1.ShowSync(BOTNAME);
             }
+            int POINTBOTFACTION = 0;
+            int POINTPLAYERFACTION = 0;
         }
 
         async Task PictureEnablefalse()
@@ -230,30 +244,43 @@ namespace Rock_Paper_Scissors_Game
         {
             //PG - Player
             //BGF - BotGeneration
+
             if (PG == "Rock" && BGF == "Rock")
             {
                 MessageBox.Show("Draw!!!");
-            }else if (PG == "Paper" && BGF == "Paper")
+            } else if (PG == "Paper" && BGF == "Paper")
             {
                 MessageBox.Show("Draw!!!");
-            }else if (PG == "Scissors" && BGF == "Scissors")
+            } else if (PG == "Scissors" && BGF == "Scissors")
             {
                 MessageBox.Show("Draw!!!");
-            }else if (PG == "Rock" && BGF == "Paper")
+            } else if (PG == "Rock" && BGF == "Paper")
             {
                 MessageBox.Show("You Lose!!!");
+                int POINTBOTFACTION = +1;
+            }else if (PG == "Rock" && BGF == "Scissors")
+            {
+                MessageBox.Show("You Win!!");
+                int POINTPLAYERFACTION = +1;
             }else if (PG == "Paper" && BGF == "Rock")
             {
                 MessageBox.Show("You Win!!");
-            }else if (PG == "Paper" && BGF == "Scissors")
+                int POINTPLAYERFACTION = + 1;
+            }
+            else if (PG == "Paper" && BGF == "Scissors")
             {
                 MessageBox.Show("You Lose!!!");
-            }else if (PG == "Scissors" && BGF == "Paper")
+                int POINTBOTFACTION = + 1;
+            }
+            else if (PG == "Scissors" && BGF == "Paper")
             {
                 MessageBox.Show("You Win!!!");
-            }else
+                int POINTPLAYERFACTION = + 1;
+            }
+            else
             {
                 MessageBox.Show("You Lose!!!");
+                int POINTBOTFACTION = + 1;
             }
         }
         public async Task RandomNumber() //Codeing For Random.!*******************************************
