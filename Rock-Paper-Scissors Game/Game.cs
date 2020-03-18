@@ -300,7 +300,6 @@ namespace Rock_Paper_Scissors_Game
                 RandomNumber();
                 //ระบบ RandomNumber
                 //ตัวตัดสิน Zone ************************
-                ChackVar();
                 Calculator();
                 //ตัวตัดสิน Zone ************************
             }
@@ -327,6 +326,12 @@ namespace Rock_Paper_Scissors_Game
                 await BOTCLOADING();
                 await CountDownStart();
                 PG = "Scissors";
+                //ระบบ RandomNumber
+                RandomNumber();
+                //ระบบ RandomNumber
+                //ตัวตัดสิน Zone ************************
+                Calculator();
+                //ตัวตัดสิน Zone ************************
             }
         }
 
@@ -347,6 +352,12 @@ namespace Rock_Paper_Scissors_Game
                 await BOTCLOADING();
                 await CountDownStart();
                 PG = "Paper";
+                //ระบบ RandomNumber
+                RandomNumber();
+                //ระบบ RandomNumber
+                //ตัวตัดสิน Zone ************************
+                Calculator();
+                //ตัวตัดสิน Zone ************************
             }
         }
         //สร้างระบบเกม****************************************************************************************************
