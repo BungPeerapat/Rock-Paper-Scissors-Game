@@ -19,11 +19,11 @@ namespace Rock_Paper_Scissors_Game
         {
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
-            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
+            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
             PictureMain.Visible = true;
             Closepicture();
-            int Round = 0;
         }
+
         async Task Closepicture()
         {
             Rock.Hide();
@@ -122,12 +122,22 @@ namespace Rock_Paper_Scissors_Game
             Form1 Menu = new Form1();
             Menu.Show();
         }
-        private void pictureBox1_Click(object sender, EventArgs e) //เอาไว้เป่าใหม่ /////ยังไม่เสร๊จเลยยยยยยยยยยยยย
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+        public static int PlayerPoint = 0;
+        public static int BotPoint = 0;
         async Task Replay()//เอาไว้เป่าใหม่อีกครั้ง
         {
+            if ((PlayerPoint == 4))
+            {
+                MessageBox.Show("You are Winner!!!");
+            }
+            if ((BotPoint == 4))
+            {
+                MessageBox.Show("You are Lose!!!");
+            }
             CountDownCC.Enabled = true;
             CountDownCC.Visible = false;
             if (CountDownCC.Visible == false)
@@ -140,6 +150,39 @@ namespace Rock_Paper_Scissors_Game
             ShowRPSPictureBox();
             VisibleShowAnimation();
             PictureEnabletrue();
+        }
+        async Task ShowPointPB() //แสดงคะแนนของ Player and Bot
+        {
+            if ((PlayerPoint == 1))
+            {
+                POINTNUMBERPLAYER.Text = "1";
+            }else if ((PlayerPoint == 2))
+            {
+                POINTNUMBERPLAYER.Text = "2";
+            }else if ((PlayerPoint == 3))
+            {
+                POINTNUMBERPLAYER.Text = "3";
+            }
+            else
+            {
+                POINTNUMBERPLAYER.Text = "4";
+            }
+            if ((BotPoint == 1))
+            {
+                POINTNUMBERBOT.Text = "1";
+            }
+            else if ((BotPoint == 2))
+            {
+                POINTNUMBERBOT.Text = "2";
+            }
+            else if ((BotPoint == 3))
+            {
+                POINTNUMBERBOT.Text = "3";
+            }
+            else
+            {
+                POINTNUMBERBOT.Text = "4";
+            }
         }
         async Task AnimationOpen() //Delay For Start Animation
         {
@@ -299,32 +342,37 @@ namespace Rock_Paper_Scissors_Game
             {
                 SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
                 MessageBox.Show("You Lose!!!");
-
+                BotPoint = BotPoint + 1;
             }
             else if (PG == "Rock" && BGF == "Scissors")
             {
                 SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
                 MessageBox.Show("You Win!!");
+                PlayerPoint = PlayerPoint + 1;
             }
             else if (PG == "Paper" && BGF == "Rock")
             {
                 SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
                 MessageBox.Show("You Win!!");
+                PlayerPoint = PlayerPoint + 1;
             }
             else if (PG == "Paper" && BGF == "Scissors")
             {
                 SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
                 MessageBox.Show("You Lose!!!");
+                BotPoint = BotPoint + 1;
             }
             else if (PG == "Scissors" && BGF == "Paper")
             {
                 SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
                 MessageBox.Show("You Win!!!");
+                PlayerPoint = PlayerPoint + 1;
             }
             else
             {
                 SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
                 MessageBox.Show("You Lose!!!");
+                BotPoint = BotPoint + 1;
             }
         }
         public async Task RandomNumber() //Codeing For Random.!*******************************************
