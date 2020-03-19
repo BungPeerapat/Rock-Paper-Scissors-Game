@@ -130,16 +130,32 @@ namespace Rock_Paper_Scissors_Game
         public static int BotPoint = 0;
         async Task Replay()//เอาไว้เป่าใหม่อีกครั้ง
         {
-            if ((PlayerPoint == 1))
+            if ((PlayerPoint == 4))
             {
                 MessageBox.Show("You are Winner!!!");
-                SpeakerCute2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เอะ.wav");
-                Player2.close();
-                this.Close();
-                Form1 Menu = new Form1();
-                Menu.Show();
-                this.Hide();
-                
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เอะ.wav");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\จะเอายังไง.wav");
+                DialogResult GiveUp = MessageBox.Show("GiveUp for Her.", "Don't GiveUp!", MessageBoxButtons.YesNo);
+                if (GiveUp == DialogResult.Yes)
+                {
+                    SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\แข๊งขันหน่อย.wav");
+                    await Time2second();
+                    Player2.close();
+                    this.Close();
+                    Form1 Menu = new Form1();
+                    Menu.Show();
+                    this.Hide();
+                }
+                else if (GiveUp == DialogResult.No)
+                {
+                    SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\นายได้เห็นโรงศพแน่.wav");
+                    await Time2second();
+                    Player2.close();
+                    this.Close();
+                    Form1 Menu = new Form1();
+                    Menu.Show();
+                    this.Hide();
+                }
             }
             if ((BotPoint == 4))
             {
