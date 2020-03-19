@@ -14,12 +14,14 @@ namespace Rock_Paper_Scissors_Game
 {
     public partial class Game : Form
     {
+
         public Game()
         {
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
             Closepicture();
+            int Round = 0;
         }
         async Task Closepicture()
         {
@@ -127,11 +129,21 @@ namespace Rock_Paper_Scissors_Game
         private void pictureBox1_Click(object sender, EventArgs e) //เอาไว้เป่าใหม่ /////ยังไม่เสร๊จเลยยยยยยยยยยยยย
         {
 
+        }
+        async Task Replay()//เอาไว้เป่าใหม่อีกครั้ง
+        {
             this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ANime Male 1.png");
             this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Himegoto.png");
             Time2second();
             ShowRPSPictureBox();
             VisibleShowAnimation();
+            PictureEnabletrue();
+            CountDownCC.Enabled = false;
+            CountDownCC.Visible = true;
+            if (POINTNUMBERBOT.Text == "1")
+            {
+
+            }
         }
         async Task AnimationOpen() //Delay For Start Animation
         {
@@ -203,7 +215,7 @@ namespace Rock_Paper_Scissors_Game
             PLAYERNAME.Visible = false;
             BOTNAME.Visible = false;
         }
-        async private void CB_Click(object sender, EventArgs e)
+        async public void CB_Click(object sender, EventArgs e)
         {
             Moveup();
             await AnimationOpen();
@@ -230,9 +242,15 @@ namespace Rock_Paper_Scissors_Game
                 AT1.ShowSync(BOTC);
                 AT1.ShowSync(PLAYERNAME);
                 AT1.ShowSync(BOTNAME);
+                CB.Enabled = false;
+                CB.Visible = true;
             }
-            int POINTBOTFACTION = 0;
-            int POINTPLAYERFACTION = 0;
+        }
+        async Task PictureEnabletrue()
+        {
+            Rock.Enabled = true;
+            Scissors.Enabled = true;
+            paper.Enabled = true;
         }
 
         async Task PictureEnablefalse()
@@ -263,7 +281,8 @@ namespace Rock_Paper_Scissors_Game
             await Time2second();
 
         }
-        async Task Calculator()  //Codeing ตัวตัดสิน!****************************************
+
+        public void Calculator()  //Codeing ตัวตัดสิน!****************************************
         {
             //PG - Player
             //BGF - BotGeneration
@@ -280,30 +299,24 @@ namespace Rock_Paper_Scissors_Game
             } else if (PG == "Rock" && BGF == "Paper")
             {
                 MessageBox.Show("You Lose!!!");
-                int POINTBOTFACTION = +1;
             }else if (PG == "Rock" && BGF == "Scissors")
             {
                 MessageBox.Show("You Win!!");
-                int POINTPLAYERFACTION = +1;
             }else if (PG == "Paper" && BGF == "Rock")
             {
                 MessageBox.Show("You Win!!");
-                int POINTPLAYERFACTION = + 1;
             }
             else if (PG == "Paper" && BGF == "Scissors")
             {
                 MessageBox.Show("You Lose!!!");
-                int POINTBOTFACTION = + 1;
             }
             else if (PG == "Scissors" && BGF == "Paper")
             {
                 MessageBox.Show("You Win!!!");
-                int POINTPLAYERFACTION = + 1;
             }
             else
             {
                 MessageBox.Show("You Lose!!!");
-                int POINTBOTFACTION = + 1;
             }
         }
         public async Task RandomNumber() //Codeing For Random.!*******************************************
@@ -329,7 +342,15 @@ namespace Rock_Paper_Scissors_Game
                 BGF = "Paper";
             }
         }
-        async private void Rock_Click(object sender, EventArgs e) //ออกค้อน***********************
+        public static int Pointplayer(int PP) //บวกคะแนน PLAYER
+        {
+            return PP + 1;
+        }
+        public static int Pointbot(int PB)
+        {
+            return PB + 1; //บวกคะแนน BOT
+        }
+        async public void Rock_Click(object sender, EventArgs e) //ออกค้อน***********************
         {
             paper.Hide();
             Scissors.Hide();
@@ -351,8 +372,46 @@ namespace Rock_Paper_Scissors_Game
                 ChackVar();
                 //ระบบ RandomNumber
                 //ตัวตัดสิน Zone ************************
-                Calculator();
+                if (PG == "Rock" && BGF == "Rock")
+                {
+                    MessageBox.Show("Draw!!!");
+                }
+                else if (PG == "Paper" && BGF == "Paper")
+                {
+                    MessageBox.Show("Draw!!!");
+                }
+                else if (PG == "Scissors" && BGF == "Scissors")
+                {
+                    MessageBox.Show("Draw!!!");
+                }
+                else if (PG == "Rock" && BGF == "Paper")
+                {
+                    MessageBox.Show("You Lose!!!");
+                    Pointbot();
+                }
+                else if (PG == "Rock" && BGF == "Scissors")
+                {
+                    MessageBox.Show("You Win!!");
+                }
+                else if (PG == "Paper" && BGF == "Rock")
+                {
+                    MessageBox.Show("You Win!!");
+                }
+                else if (PG == "Paper" && BGF == "Scissors")
+                {
+                    MessageBox.Show("You Lose!!!");
+                }
+                else if (PG == "Scissors" && BGF == "Paper")
+                {
+                    MessageBox.Show("You Win!!!");
+                }
+                else
+                {
+                    MessageBox.Show("You Lose!!!");
+                }
                 //ตัวตัดสิน Zone ************************
+                Replay();
+
             }
         }
         async Task BOTCLOADING()
