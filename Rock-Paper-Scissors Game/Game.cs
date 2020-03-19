@@ -34,8 +34,8 @@ namespace Rock_Paper_Scissors_Game
             BOTNAME.Hide();
             POINTPLAYER.Hide();
             POINTBOT.Hide();
-            POINTNUMBERBOT.Visible = true;
-            POINTNUMBERPLAYER.Visible = true;
+            POINTNUMBERBOT.Visible = false;
+            POINTNUMBERPLAYER.Visible = false;
         }
         async Task Time05second() //เอาไว้ Delay คำสั่งเด้อ สู้ๆ!!!!! >0<
         {
@@ -162,7 +162,7 @@ namespace Rock_Paper_Scissors_Game
                 Console.Beep();
                 AT1.HideSync(PictureMain);
                 await Task.Delay(2000);
-                PictureMain.Visible = true;
+                PictureMain.Visible = false;
                 PictureMain.Hide();
             }
         }
