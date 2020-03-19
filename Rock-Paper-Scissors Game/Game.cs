@@ -132,18 +132,18 @@ namespace Rock_Paper_Scissors_Game
         }
         async Task Replay()//เอาไว้เป่าใหม่อีกครั้ง
         {
+            CountDownCC.Enabled = true;
+            CountDownCC.Visible = false;
+            if (CountDownCC.Visible == false)
+            {
+                AT2.HideSync(CountDownCC);
+            }
             this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ANime Male 1.png");
             this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Himegoto.png");
             Time2second();
             ShowRPSPictureBox();
             VisibleShowAnimation();
             PictureEnabletrue();
-            CountDownCC.Enabled = true;
-            CountDownCC.Visible = false;
-            if (CountDownCC.Visible == false)
-            {
-                AT3.HideSync(CountDownCC);
-            }
         }
         async Task AnimationOpen() //Delay For Start Animation
         {
@@ -267,7 +267,7 @@ namespace Rock_Paper_Scissors_Game
             {
                 AT3.ShowSync(CountDownCC);
             }
-            SpeakerCute2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\1-3.wav");
+            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\1-3.wav");
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 1.jpg");
             await Time2second();
@@ -289,46 +289,46 @@ namespace Rock_Paper_Scissors_Game
 
             if (PG == "Rock" && BGF == "Rock")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
                 MessageBox.Show("Draw!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
             } else if (PG == "Paper" && BGF == "Paper")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
                 MessageBox.Show("Draw!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
             } else if (PG == "Scissors" && BGF == "Scissors")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
                 MessageBox.Show("Draw!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
             } else if (PG == "Rock" && BGF == "Paper")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
                 MessageBox.Show("You Lose!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
 
             }
             else if (PG == "Rock" && BGF == "Scissors")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
                 MessageBox.Show("You Win!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
             }
             else if (PG == "Paper" && BGF == "Rock")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
                 MessageBox.Show("You Win!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
             }
             else if (PG == "Paper" && BGF == "Scissors")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
                 MessageBox.Show("You Lose!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
             }
             else if (PG == "Scissors" && BGF == "Paper")
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
                 MessageBox.Show("You Win!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
             }
             else
             {
+                SpeakerCute1("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
                 MessageBox.Show("You Lose!!!");
-                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
             }
         }
         public async Task RandomNumber() //Codeing For Random.!*******************************************
