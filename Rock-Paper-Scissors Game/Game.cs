@@ -130,14 +130,21 @@ namespace Rock_Paper_Scissors_Game
         public static int BotPoint = 0;
         async Task Replay()//เอาไว้เป่าใหม่อีกครั้ง
         {
-            if ((PlayerPoint == 4))
+            if ((PlayerPoint == 1))
             {
                 MessageBox.Show("You are Winner!!!");
-
+                SpeakerCute2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เอะ.wav");
+                Player2.close();
+                this.Close();
+                Form1 Menu = new Form1();
+                Menu.Show();
+                this.Hide();
+                
             }
             if ((BotPoint == 4))
             {
                 MessageBox.Show("You are Lose!!!");
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\แข๊งขันหน่อย.wav");
             }
             CountDownCC.Enabled = true;
             CountDownCC.Visible = false;
