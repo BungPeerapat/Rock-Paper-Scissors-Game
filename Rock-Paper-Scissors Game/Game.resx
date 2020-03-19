@@ -8920,6 +8920,9 @@
         wr/92/8PJDusH/sITPQAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="POINTBOT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="CB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlh4AHgAfd7ACOpziqs0C+u0TCu0Taw0ULGx0PHx0S11UbIyEfIyEnJyUvJyUzKyk261U3Kyk7K
@@ -27617,9 +27620,6 @@
         HX/5y/8ffjPCdXe8+7AAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="POINTBOT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlh9AFTAfcAAP/i6//S3v/v9f/a5P67y//g6f7B0P/Q3P/Y4v/x9//j6//l7f/n7//u9P/w9v/h

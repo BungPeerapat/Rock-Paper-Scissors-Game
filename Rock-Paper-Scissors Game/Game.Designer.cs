@@ -40,8 +40,14 @@
             this.PictureMain = new System.Windows.Forms.PictureBox();
             this.PLAYERNAME = new System.Windows.Forms.Label();
             this.BOTNAME = new System.Windows.Forms.Label();
-            this.CountDownCC = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.POINTPLAYER = new System.Windows.Forms.Label();
+            this.POINTBOT = new System.Windows.Forms.Label();
+            this.POINTNUMBERPLAYER = new System.Windows.Forms.Label();
+            this.POINTNUMBERBOT = new System.Windows.Forms.Label();
+            this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.AT3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.CB = new Rock_Paper_Scissors_Game.CircularPictureBox();
+            this.CountDownCC = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.PlayerC = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.BOTC = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.paper = new Rock_Paper_Scissors_Game.CircularPictureBox();
@@ -49,16 +55,10 @@
             this.Rock = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.circularPictureBox1 = new Rock_Paper_Scissors_Game.CircularPictureBox();
             this.circularPictureBox2 = new Rock_Paper_Scissors_Game.CircularPictureBox();
-            this.POINTPLAYER = new System.Windows.Forms.Label();
-            this.POINTBOT = new System.Windows.Forms.Label();
-            this.POINTNUMBERPLAYER = new System.Windows.Forms.Label();
-            this.POINTNUMBERBOT = new System.Windows.Forms.Label();
-            this.AT2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.AT3 = new BunifuAnimatorNS.BunifuTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paper)).BeginInit();
@@ -183,132 +183,6 @@
             this.BOTNAME.TabIndex = 8;
             this.BOTNAME.Text = "BOT";
             // 
-            // CountDownCC
-            // 
-            this.CountDownCC.BackColor = System.Drawing.Color.Transparent;
-            this.AT3.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
-            this.CountDownCC.Enabled = false;
-            this.CountDownCC.Location = new System.Drawing.Point(298, 258);
-            this.CountDownCC.Name = "CountDownCC";
-            this.CountDownCC.Size = new System.Drawing.Size(271, 221);
-            this.CountDownCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CountDownCC.TabIndex = 9;
-            this.CountDownCC.TabStop = false;
-            this.CountDownCC.Visible = false;
-            this.CountDownCC.Click += new System.EventHandler(this.CountDownCC_Click_1);
-            // 
-            // CB
-            // 
-            this.CB.BackColor = System.Drawing.Color.Transparent;
-            this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AT3.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
-            this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
-            this.CB.Location = new System.Drawing.Point(195, 45);
-            this.CB.Name = "CB";
-            this.CB.Size = new System.Drawing.Size(493, 434);
-            this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CB.TabIndex = 0;
-            this.CB.TabStop = false;
-            this.CB.Click += new System.EventHandler(this.CB_Click);
-            // 
-            // PlayerC
-            // 
-            this.PlayerC.BackColor = System.Drawing.Color.Transparent;
-            this.AT3.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
-            this.PlayerC.Image = ((System.Drawing.Image)(resources.GetObject("PlayerC.Image")));
-            this.PlayerC.Location = new System.Drawing.Point(162, 63);
-            this.PlayerC.Name = "PlayerC";
-            this.PlayerC.Size = new System.Drawing.Size(179, 170);
-            this.PlayerC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PlayerC.TabIndex = 7;
-            this.PlayerC.TabStop = false;
-            // 
-            // BOTC
-            // 
-            this.BOTC.BackColor = System.Drawing.Color.Transparent;
-            this.AT3.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
-            this.BOTC.Image = ((System.Drawing.Image)(resources.GetObject("BOTC.Image")));
-            this.BOTC.Location = new System.Drawing.Point(509, 63);
-            this.BOTC.Name = "BOTC";
-            this.BOTC.Size = new System.Drawing.Size(182, 177);
-            this.BOTC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BOTC.TabIndex = 7;
-            this.BOTC.TabStop = false;
-            // 
-            // paper
-            // 
-            this.AT3.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
-            this.paper.Image = ((System.Drawing.Image)(resources.GetObject("paper.Image")));
-            this.paper.Location = new System.Drawing.Point(643, 278);
-            this.paper.Name = "paper";
-            this.paper.Size = new System.Drawing.Size(182, 177);
-            this.paper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.paper.TabIndex = 7;
-            this.paper.TabStop = false;
-            this.paper.Click += new System.EventHandler(this.paper_Click);
-            // 
-            // Scissors
-            // 
-            this.AT3.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
-            this.Scissors.Image = ((System.Drawing.Image)(resources.GetObject("Scissors.Image")));
-            this.Scissors.Location = new System.Drawing.Point(349, 278);
-            this.Scissors.Name = "Scissors";
-            this.Scissors.Size = new System.Drawing.Size(182, 177);
-            this.Scissors.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Scissors.TabIndex = 6;
-            this.Scissors.TabStop = false;
-            this.Scissors.Click += new System.EventHandler(this.Scissors_Click);
-            // 
-            // Rock
-            // 
-            this.AT3.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
-            this.Rock.Image = ((System.Drawing.Image)(resources.GetObject("Rock.Image")));
-            this.Rock.Location = new System.Drawing.Point(42, 278);
-            this.Rock.Name = "Rock";
-            this.Rock.Size = new System.Drawing.Size(182, 177);
-            this.Rock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Rock.TabIndex = 5;
-            this.Rock.TabStop = false;
-            this.Rock.Click += new System.EventHandler(this.Rock_Click);
-            // 
-            // circularPictureBox1
-            // 
-            this.AT3.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.circularPictureBox1.Location = new System.Drawing.Point(210, 56);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(182, 177);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.circularPictureBox1.TabIndex = 7;
-            this.circularPictureBox1.TabStop = false;
-            // 
-            // circularPictureBox2
-            // 
-            this.AT3.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.AT2.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.AT1.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.circularPictureBox2.Location = new System.Drawing.Point(506, 56);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(182, 177);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.circularPictureBox2.TabIndex = 7;
-            this.circularPictureBox2.TabStop = false;
-            // 
             // POINTPLAYER
             // 
             this.POINTPLAYER.AutoSize = true;
@@ -412,6 +286,132 @@
             animation1.TransparencyCoeff = 1F;
             this.AT3.DefaultAnimation = animation1;
             // 
+            // CB
+            // 
+            this.CB.BackColor = System.Drawing.Color.Transparent;
+            this.CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AT3.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.CB, BunifuAnimatorNS.DecorationType.None);
+            this.CB.Image = ((System.Drawing.Image)(resources.GetObject("CB.Image")));
+            this.CB.Location = new System.Drawing.Point(195, 45);
+            this.CB.Name = "CB";
+            this.CB.Size = new System.Drawing.Size(493, 434);
+            this.CB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CB.TabIndex = 0;
+            this.CB.TabStop = false;
+            this.CB.Click += new System.EventHandler(this.CB_Click);
+            // 
+            // CountDownCC
+            // 
+            this.CountDownCC.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.CountDownCC, BunifuAnimatorNS.DecorationType.None);
+            this.CountDownCC.Enabled = false;
+            this.CountDownCC.Location = new System.Drawing.Point(298, 258);
+            this.CountDownCC.Name = "CountDownCC";
+            this.CountDownCC.Size = new System.Drawing.Size(271, 221);
+            this.CountDownCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CountDownCC.TabIndex = 9;
+            this.CountDownCC.TabStop = false;
+            this.CountDownCC.Visible = false;
+            this.CountDownCC.Click += new System.EventHandler(this.CountDownCC_Click_1);
+            // 
+            // PlayerC
+            // 
+            this.PlayerC.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.PlayerC, BunifuAnimatorNS.DecorationType.None);
+            this.PlayerC.Image = ((System.Drawing.Image)(resources.GetObject("PlayerC.Image")));
+            this.PlayerC.Location = new System.Drawing.Point(162, 63);
+            this.PlayerC.Name = "PlayerC";
+            this.PlayerC.Size = new System.Drawing.Size(179, 170);
+            this.PlayerC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PlayerC.TabIndex = 7;
+            this.PlayerC.TabStop = false;
+            // 
+            // BOTC
+            // 
+            this.BOTC.BackColor = System.Drawing.Color.Transparent;
+            this.AT3.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.BOTC, BunifuAnimatorNS.DecorationType.None);
+            this.BOTC.Image = ((System.Drawing.Image)(resources.GetObject("BOTC.Image")));
+            this.BOTC.Location = new System.Drawing.Point(509, 63);
+            this.BOTC.Name = "BOTC";
+            this.BOTC.Size = new System.Drawing.Size(182, 177);
+            this.BOTC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BOTC.TabIndex = 7;
+            this.BOTC.TabStop = false;
+            // 
+            // paper
+            // 
+            this.AT3.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.paper, BunifuAnimatorNS.DecorationType.None);
+            this.paper.Image = ((System.Drawing.Image)(resources.GetObject("paper.Image")));
+            this.paper.Location = new System.Drawing.Point(643, 278);
+            this.paper.Name = "paper";
+            this.paper.Size = new System.Drawing.Size(182, 177);
+            this.paper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.paper.TabIndex = 7;
+            this.paper.TabStop = false;
+            this.paper.Click += new System.EventHandler(this.paper_Click);
+            // 
+            // Scissors
+            // 
+            this.AT3.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.Scissors, BunifuAnimatorNS.DecorationType.None);
+            this.Scissors.Image = ((System.Drawing.Image)(resources.GetObject("Scissors.Image")));
+            this.Scissors.Location = new System.Drawing.Point(349, 278);
+            this.Scissors.Name = "Scissors";
+            this.Scissors.Size = new System.Drawing.Size(182, 177);
+            this.Scissors.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Scissors.TabIndex = 6;
+            this.Scissors.TabStop = false;
+            this.Scissors.Click += new System.EventHandler(this.Scissors_Click);
+            // 
+            // Rock
+            // 
+            this.AT3.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.Rock, BunifuAnimatorNS.DecorationType.None);
+            this.Rock.Image = ((System.Drawing.Image)(resources.GetObject("Rock.Image")));
+            this.Rock.Location = new System.Drawing.Point(42, 278);
+            this.Rock.Name = "Rock";
+            this.Rock.Size = new System.Drawing.Size(182, 177);
+            this.Rock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Rock.TabIndex = 5;
+            this.Rock.TabStop = false;
+            this.Rock.Click += new System.EventHandler(this.Rock_Click);
+            // 
+            // circularPictureBox1
+            // 
+            this.AT3.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.circularPictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.circularPictureBox1.Location = new System.Drawing.Point(210, 56);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(182, 177);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.circularPictureBox1.TabIndex = 7;
+            this.circularPictureBox1.TabStop = false;
+            // 
+            // circularPictureBox2
+            // 
+            this.AT3.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.AT2.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.AT1.SetDecoration(this.circularPictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.circularPictureBox2.Location = new System.Drawing.Point(506, 56);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(182, 177);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.circularPictureBox2.TabIndex = 7;
+            this.circularPictureBox2.TabStop = false;
+            // 
             // Game
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -445,8 +445,8 @@
             this.Text = "Let Started!";
             ((System.ComponentModel.ISupportInitialize)(this.BACKGROUNDGAMESTART)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountDownCC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BOTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paper)).EndInit();

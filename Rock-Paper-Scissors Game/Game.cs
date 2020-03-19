@@ -20,6 +20,7 @@ namespace Rock_Paper_Scissors_Game
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
             PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
+            PictureMain.Visible = true;
             Closepicture();
             int Round = 0;
         }
@@ -75,11 +76,6 @@ namespace Rock_Paper_Scissors_Game
             FS1.controls.play();
             FS1.settings.volume = 20;
         }
-
-        private void LetStartText(string url)
-        {
-
-        }
         private void SpeakerCute2(string url)
         {
             FS2 = new WMPLib.WindowsMediaPlayer();
@@ -102,7 +98,7 @@ namespace Rock_Paper_Scissors_Game
             Start.URL = url;
             Start.controls.play();
             Start.settings.setMode("loop", false);
-            Start.settings.volume = 5;
+            Start.settings.volume = 20;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -267,7 +263,7 @@ namespace Rock_Paper_Scissors_Game
             {
                 AT3.ShowSync(CountDownCC);
             }
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\1-3.wav");
+            StartSound(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\1-3.wav");
             SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             this.CountDownCC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Number 1.jpg");
             await Time2second();
