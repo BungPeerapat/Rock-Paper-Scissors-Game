@@ -138,11 +138,11 @@ namespace Rock_Paper_Scissors_Game
             ShowRPSPictureBox();
             VisibleShowAnimation();
             PictureEnabletrue();
-            CountDownCC.Enabled = false;
-            CountDownCC.Visible = true;
-            if (POINTNUMBERBOT.Text == "1")
+            CountDownCC.Enabled = true;
+            CountDownCC.Visible = false;
+            if (CountDownCC.Visible == false)
             {
-
+                AT3.HideSync(CountDownCC);
             }
         }
         async Task AnimationOpen() //Delay For Start Animation
@@ -290,33 +290,45 @@ namespace Rock_Paper_Scissors_Game
             if (PG == "Rock" && BGF == "Rock")
             {
                 MessageBox.Show("Draw!!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
             } else if (PG == "Paper" && BGF == "Paper")
             {
                 MessageBox.Show("Draw!!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
             } else if (PG == "Scissors" && BGF == "Scissors")
             {
                 MessageBox.Show("Draw!!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\เสมอกันนะคะ.wav");
             } else if (PG == "Rock" && BGF == "Paper")
             {
                 MessageBox.Show("You Lose!!!");
-            }else if (PG == "Rock" && BGF == "Scissors")
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
+
+            }
+            else if (PG == "Rock" && BGF == "Scissors")
             {
                 MessageBox.Show("You Win!!");
-            }else if (PG == "Paper" && BGF == "Rock")
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
+            }
+            else if (PG == "Paper" && BGF == "Rock")
             {
                 MessageBox.Show("You Win!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
             }
             else if (PG == "Paper" && BGF == "Scissors")
             {
                 MessageBox.Show("You Lose!!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
             }
             else if (PG == "Scissors" && BGF == "Paper")
             {
                 MessageBox.Show("You Win!!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\โกงใช่ไหมคะ.wav");
             }
             else
             {
                 MessageBox.Show("You Lose!!!");
+                SpeakerCute2("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Music\\Sound\\ชนะค่า.wav");
             }
         }
         public async Task RandomNumber() //Codeing For Random.!*******************************************
@@ -342,11 +354,11 @@ namespace Rock_Paper_Scissors_Game
                 BGF = "Paper";
             }
         }
-        public static int Pointplayer(int PP) //บวกคะแนน PLAYER
+        public static int Pointplayer(int PP) //บวกคะแนน PLAYER //ยังไม่เสร๊จ ************
         {
             return PP + 1;
-        }
-        public static int Pointbot(int PB)
+        }//บวกคะแนน PLAYER //ยังไม่เสร๊จ
+        public static int Pointbot(int PB) //บวกคะแนน BOT //ยังไม่เสร๊จ **************
         {
             return PB + 1; //บวกคะแนน BOT
         }
@@ -372,42 +384,7 @@ namespace Rock_Paper_Scissors_Game
                 ChackVar();
                 //ระบบ RandomNumber
                 //ตัวตัดสิน Zone ************************
-                if (PG == "Rock" && BGF == "Rock")
-                {
-                    MessageBox.Show("Draw!!!");
-                }
-                else if (PG == "Paper" && BGF == "Paper")
-                {
-                    MessageBox.Show("Draw!!!");
-                }
-                else if (PG == "Scissors" && BGF == "Scissors")
-                {
-                    MessageBox.Show("Draw!!!");
-                }
-                else if (PG == "Rock" && BGF == "Paper")
-                {
-                    MessageBox.Show("You Lose!!!");
-                }
-                else if (PG == "Rock" && BGF == "Scissors")
-                {
-                    MessageBox.Show("You Win!!");
-                }
-                else if (PG == "Paper" && BGF == "Rock")
-                {
-                    MessageBox.Show("You Win!!");
-                }
-                else if (PG == "Paper" && BGF == "Scissors")
-                {
-                    MessageBox.Show("You Lose!!!");
-                }
-                else if (PG == "Scissors" && BGF == "Paper")
-                {
-                    MessageBox.Show("You Win!!!");
-                }
-                else
-                {
-                    MessageBox.Show("You Lose!!!");
-                }
+                Calculator();
                 //ตัวตัดสิน Zone ************************
                 Replay();
 
@@ -441,6 +418,7 @@ namespace Rock_Paper_Scissors_Game
                 //ตัวตัดสิน Zone ************************
                 Calculator();
                 //ตัวตัดสิน Zone ************************
+                Replay();
             }
         }
 
@@ -467,6 +445,7 @@ namespace Rock_Paper_Scissors_Game
                 //ตัวตัดสิน Zone ************************
                 Calculator();
                 //ตัวตัดสิน Zone ************************
+                Replay();
             }
         }
         //สร้างระบบเกม****************************************************************************************************
