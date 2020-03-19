@@ -133,6 +133,7 @@ namespace Rock_Paper_Scissors_Game
             if ((PlayerPoint == 4))
             {
                 MessageBox.Show("You are Winner!!!");
+
             }
             if ((BotPoint == 4))
             {
@@ -144,6 +145,7 @@ namespace Rock_Paper_Scissors_Game
             {
                 AT2.HideSync(CountDownCC);
             }
+            ShowPointPB();
             this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ANime Male 1.png");
             this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Himegoto.png");
             Time2second();
@@ -156,32 +158,42 @@ namespace Rock_Paper_Scissors_Game
             if ((PlayerPoint == 1))
             {
                 POINTNUMBERPLAYER.Text = "1";
-            }else if ((PlayerPoint == 2))
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+            }
+            else if ((PlayerPoint == 2))
             {
                 POINTNUMBERPLAYER.Text = "2";
-            }else if ((PlayerPoint == 3))
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
+            }
+            else if ((PlayerPoint == 3))
             {
                 POINTNUMBERPLAYER.Text = "3";
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             }
-            else
+            else if ((PlayerPoint == 4))
             {
                 POINTNUMBERPLAYER.Text = "4";
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             }
             if ((BotPoint == 1))
             {
                 POINTNUMBERBOT.Text = "1";
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             }
             else if ((BotPoint == 2))
             {
                 POINTNUMBERBOT.Text = "2";
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             }
             else if ((BotPoint == 3))
             {
                 POINTNUMBERBOT.Text = "3";
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             }
-            else
+            else if ((BotPoint == 4))
             {
                 POINTNUMBERBOT.Text = "4";
+                SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\ComputerData.wav");
             }
         }
         async Task AnimationOpen() //Delay For Start Animation
