@@ -130,7 +130,8 @@ namespace Rock_Paper_Scissors_Game
             this.PlayerC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\ANime Male 1.png");
             this.BOTC.Load("C:\\Users\\BungK\\source\\repos\\Rock-Paper-Scissors Game\\Picture\\Himegoto.png");
             Time2second();
-            SpeakerCute1(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\เป่ายิ้งฉุบ.wav");
+            ShowRPSPictureBox();
+            VisibleShowAnimation();
         }
         async Task AnimationOpen() //Delay For Start Animation
         {
@@ -159,6 +160,24 @@ namespace Rock_Paper_Scissors_Game
             {
                 CB.Top -= 5;
                 await Time01second();
+            }
+        }
+        async Task ShowRPSPictureBox() //โชภาพ ค้อน กรรไกร กระดาษ
+        {
+            Rock.Show();
+            paper.Show();
+            Scissors.Show();
+        }
+        async Task VisibleShowAnimation() //ปิดล่องหนและโช Animation
+        {
+            Rock.Visible = false;
+            paper.Visible = false;
+            Scissors.Visible = false;
+            if (Rock.Visible == false || paper.Visible == false || Scissors.Visible == false)
+            {
+                AT2.ShowSync(Rock);
+                AT2.ShowSync(paper);
+                AT2.ShowSync(Scissors);
             }
         }
         async Task Visibleturerps() //เปิดภาพ ค้อน กรรไกร กระดาษ
