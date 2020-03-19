@@ -387,7 +387,6 @@ namespace Rock_Paper_Scissors_Game
                 else if (PG == "Rock" && BGF == "Paper")
                 {
                     MessageBox.Show("You Lose!!!");
-                    Pointbot();
                 }
                 else if (PG == "Rock" && BGF == "Scissors")
                 {
