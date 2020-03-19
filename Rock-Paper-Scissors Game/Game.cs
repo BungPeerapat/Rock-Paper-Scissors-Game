@@ -19,7 +19,7 @@ namespace Rock_Paper_Scissors_Game
         {
             InitializeComponent();
             CB.BackColor = Color.FromArgb(0, 0, 0, 0);
-            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum Pinno.wav");
+            PlayFile2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Tiny Little Adiantum.wav");
             PictureMain.Visible = true;
             Closepicture();
             int Round = 0;
@@ -98,7 +98,7 @@ namespace Rock_Paper_Scissors_Game
             Start.URL = url;
             Start.controls.play();
             Start.settings.setMode("loop", false);
-            Start.settings.volume = 20;
+            Start.settings.volume = 40;
         }
 
         private void label1_Click(object sender, EventArgs e)
