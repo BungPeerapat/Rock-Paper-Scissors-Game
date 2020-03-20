@@ -157,7 +157,7 @@ namespace Rock_Paper_Scissors_Game
                     this.Hide();
                 }
             }
-            if ((BotPoint == 1))
+            if ((BotPoint == 4))
             {
                 MessageBox.Show("You are Lose!!!");
                 SpeakerCute2(@"C:\Users\BungK\source\repos\Rock-Paper-Scissors Game\Music\Sound\แข๊งขันหน่อยๆ.wav");
